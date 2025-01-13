@@ -26,14 +26,14 @@ class Microphone {
         var i = document.querySelector("#unity-canvas"),
         t = null;
         t = () => {
-            i.removeEventListener("touchstart", t),
-            i.removeEventListener("mousedown", t),
+            i.removeEventListener("touchstart", t, { passive: true });
+            i.removeEventListener("mousedown", t);
             setTimeout(() => {
-                e.initialize(e)
-            }, 100)
-        },
-        i.addEventListener("touchstart", t),
-        i.addEventListener("mousedown", t)
+                e.initialize(e);
+            }, 100);
+        };
+        i.addEventListener("touchstart", t, { passive: true });
+        i.addEventListener("mousedown", t);
     }
     async initialize(e) {
         e.initialized || (e.audioContext = new(window.AudioContext || window.webKitAudioContext), await e.audioContext.audioWorklet.addModule("./mic-worklet-module.js"), e.audioWorkletNode = new AudioWorkletNode(e.audioContext, "microphone-worklet"), e.audioWorkletNode.port.onmessage = i => {

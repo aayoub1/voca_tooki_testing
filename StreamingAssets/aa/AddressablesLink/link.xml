@@ -4,6 +4,7 @@
     <type fullname="ActivitiesData" preserve="all" />
     <type fullname="ActivityInfoComponent" preserve="all" />
     <type fullname="ActivityListPanel" preserve="all" />
+    <type fullname="ActivityReplaceToggle" preserve="all" />
     <type fullname="ActivitySpawner" preserve="all" />
     <type fullname="AiRacerDriver" preserve="all" />
     <type fullname="AnchorGameObject" preserve="all" />
@@ -24,7 +25,6 @@
     <type fullname="BasicPopup" preserve="all" />
     <type fullname="Bird" preserve="all" />
     <type fullname="Board" preserve="all" />
-    <type fullname="BombHandler" preserve="all" />
     <type fullname="Boundry" preserve="all" />
     <type fullname="BubbleHandler" preserve="all" />
     <type fullname="BubbleMotion" preserve="all" />
@@ -98,7 +98,6 @@
     <type fullname="com.kideo.learn.english.DayNightActivityManagement" preserve="all" />
     <type fullname="com.kideo.learn.english.DayNightGameManager" preserve="all" />
     <type fullname="com.kideo.learn.english.DayNightObj" preserve="all" />
-    <type fullname="com.kideo.learn.english.DetectC" preserve="all" />
     <type fullname="com.kideo.learn.english.DialogueLevelIcon" preserve="all" />
     <type fullname="com.kideo.learn.english.DocumentSubTaskCell" preserve="all" />
     <type fullname="com.kideo.learn.english.DraggableLineRenderer" preserve="all" />
@@ -165,7 +164,6 @@
     <type fullname="com.kideo.learn.english.MatchTestWord" preserve="all" />
     <type fullname="com.kideo.learn.english.MemoryActivityManagerScript" preserve="all" />
     <type fullname="com.kideo.learn.english.MoleActivityManager" preserve="all" />
-    <type fullname="com.kideo.learn.english.MoveForward" preserve="all" />
     <type fullname="com.kideo.learn.english.NewBubblesAreaHandler" preserve="all" />
     <type fullname="com.kideo.learn.english.NewMemoryCardsPositioner" preserve="all" />
     <type fullname="com.kideo.learn.english.NewMemoryGameManager" preserve="all" />
@@ -193,7 +191,7 @@
     <type fullname="com.kideo.learn.english.RadarQuarter" preserve="all" />
     <type fullname="com.kideo.learn.english.RcLevelIcon" preserve="all" />
     <type fullname="com.kideo.learn.english.ReadingComprehensionTaskManager" preserve="all" />
-    <type fullname="com.kideo.learn.english.RocketDetector" preserve="all" />
+    <type fullname="com.kideo.learn.english.Rocket" preserve="all" />
     <type fullname="com.kideo.learn.english.RocketGameManager" preserve="all" />
     <type fullname="com.kideo.learn.english.RocketsActivityManagement" preserve="all" />
     <type fullname="com.kideo.learn.english.RotateAirplane" preserve="all" />
@@ -245,6 +243,7 @@
     <type fullname="ContextWithMissingWordQuestion" preserve="all" />
     <type fullname="ContextWithMissingWordTest" preserve="all" />
     <type fullname="ControlsOverlay" preserve="all" />
+    <type fullname="ControlsOverlayPositioner" preserve="all" />
     <type fullname="CountDownTimer" preserve="all" />
     <type fullname="CreateWordsTemplate" preserve="all" />
     <type fullname="Crosstales.RTVoice.Tool.SpeechText" preserve="all" />
@@ -298,7 +297,6 @@
     <type fullname="HardWorkerPanel" preserve="all" />
     <type fullname="HeartTimer" preserve="all" />
     <type fullname="HelpPopUpHandler" preserve="all" />
-    <type fullname="HelpRocketHandler" preserve="all" />
     <type fullname="HorizontalLayoutLangHandler" preserve="all" />
     <type fullname="IndieStudio.EnglishTracingBook.Game.AudioSources" preserve="all" />
     <type fullname="IndieStudio.EnglishTracingBook.Game.BlackArea" preserve="all" />
@@ -392,6 +390,7 @@
     <type fullname="MicAnimationHandler" preserve="all" />
     <type fullname="MoleController" preserve="all" />
     <type fullname="MonkeyPartClick" preserve="all" />
+    <type fullname="MonthlyStarsController" preserve="all" />
     <type fullname="MoveLeaf" preserve="all" />
     <type fullname="MovingBoards" preserve="all" />
     <type fullname="MultipleChoicesTask" preserve="all" />
@@ -408,6 +407,7 @@
     <type fullname="PlayerController" preserve="all" />
     <type fullname="PlayerInfoPanel" preserve="all" />
     <type fullname="PlayerRacerDriver" preserve="all" />
+    <type fullname="PlayersTableController" preserve="all" />
     <type fullname="Podium" preserve="all" />
     <type fullname="PointInfo" preserve="all" />
     <type fullname="PointsOrderingPositioner" preserve="all" />
@@ -502,7 +502,6 @@
     <type fullname="UIHandler" preserve="all" />
     <type fullname="UIRefData" preserve="all" />
     <type fullname="UIRefHandler" preserve="all" />
-    <type fullname="UITestScript" preserve="all" />
     <type fullname="UnitTest" preserve="all" />
     <type fullname="UnityEngine.UI.Extensions.RadialLayout" preserve="all" />
     <type fullname="UnityEngine.UI.LetterSpacing" preserve="all" />
@@ -551,6 +550,7 @@
     <type fullname="AwardTypeInfo" preserve="nothing" serialized="true" />
     <type fullname="DailyGameTitle" preserve="nothing" serialized="true" />
     <type fullname="NamedSound" preserve="nothing" serialized="true" />
+    <type fullname="com.kideo.gameinfra.controls.MultiValueToggleOption" preserve="nothing" serialized="true" />
     <type fullname="ExamLocalStringByName" preserve="nothing" serialized="true" />
     <type fullname="ExamScoreData" preserve="nothing" serialized="true" />
     <type fullname="YouWinTextByScore" preserve="nothing" serialized="true" />
@@ -571,7 +571,6 @@
     <type fullname="Translation" preserve="nothing" serialized="true" />
     <type fullname="Word" preserve="nothing" serialized="true" />
     <type fullname="Wordsmetadatum" preserve="nothing" serialized="true" />
-    <type fullname="com.kideo.gameinfra.controls.MultiValueToggleOption" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.Frogger.FroggerGameManager/GameModeInstruction" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.Pipes.PipePathStructure" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.SearchGameManager/CustomSpritesSizes" preserve="nothing" serialized="true" />
@@ -746,11 +745,6 @@
     <type fullname="TMPro.TMP_Dropdown/DropdownEvent" preserve="nothing" serialized="true" />
     <type fullname="TMPro.TMP_Dropdown/OptionData" preserve="nothing" serialized="true" />
     <type fullname="TMPro.TMP_Dropdown/OptionDataList" preserve="nothing" serialized="true" />
-    <type fullname="TMPro.TMP_InputField/OnChangeEvent" preserve="nothing" serialized="true" />
-    <type fullname="TMPro.TMP_InputField/SelectionEvent" preserve="nothing" serialized="true" />
-    <type fullname="TMPro.TMP_InputField/SubmitEvent" preserve="nothing" serialized="true" />
-    <type fullname="TMPro.TMP_InputField/TextSelectionEvent" preserve="nothing" serialized="true" />
-    <type fullname="TMPro.TMP_InputField/TouchScreenKeyboardEvent" preserve="nothing" serialized="true" />
     <type fullname="TMPro.FaceInfo_Legacy" preserve="nothing" serialized="true" />
     <type fullname="TMPro.FontAssetCreationSettings" preserve="nothing" serialized="true" />
     <type fullname="TMPro.KerningTable" preserve="nothing" serialized="true" />
@@ -760,6 +754,11 @@
     <type fullname="TMPro.TMP_GlyphAdjustmentRecord" preserve="nothing" serialized="true" />
     <type fullname="TMPro.TMP_GlyphPairAdjustmentRecord" preserve="nothing" serialized="true" />
     <type fullname="TMPro.TMP_GlyphValueRecord" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_InputField/OnChangeEvent" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_InputField/SelectionEvent" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_InputField/SubmitEvent" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_InputField/TextSelectionEvent" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_InputField/TouchScreenKeyboardEvent" preserve="nothing" serialized="true" />
     <type fullname="TMPro.TMP_SpriteCharacter" preserve="nothing" serialized="true" />
     <type fullname="TMPro.TMP_SpriteGlyph" preserve="nothing" serialized="true" />
   </assembly>
@@ -806,8 +805,8 @@
     <type fullname="UnityEngine.Events.UnityEvent" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.UnityEvent`1[System.Boolean]" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.UnityEvent`1[UnityEngine.GameObject]" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.U2D.SpriteBone" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.UnityEvent`2[System.String,System.String]" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.U2D.SpriteBone" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.UnityEvent`1[PuzzlePiece]" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.UnityEvent`1[System.Int32]" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.UnityEvent`2[System.String,UnityEngine.Vector3]" preserve="nothing" serialized="true" />
