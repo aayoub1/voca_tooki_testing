@@ -605,7 +605,6 @@
     <type fullname="KaelmixStudioGameAssets.TemplateWordGuess.DataWords/Words" preserve="nothing" serialized="true" />
     <type fullname="KaelmixStudioGameAssets.TemplateWordGuess.KeyboardKeyAction/Key" preserve="nothing" serialized="true" />
     <type fullname="KaelmixStudioGameAssets.TemplateWordGuess.PopupHowToPlay/Word" preserve="nothing" serialized="true" />
-    <type fullname="TextAssetContainer" preserve="nothing" serialized="true" />
     <type fullname="WordleSaveData" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.DailyGames.DailyGamesUIResultData" preserve="nothing" serialized="true" />
     <type fullname="ActivityIdToSceneId" preserve="nothing" serialized="true" />
