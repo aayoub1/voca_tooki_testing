@@ -484,6 +484,7 @@
     <type fullname="TaskSubmitButton" preserve="all" />
     <type fullname="TestGameScript" preserve="all" />
     <type fullname="TestScoreEntery" preserve="all" />
+    <type fullname="TestsPrefabsManager" preserve="all" />
     <type fullname="TestsScoreFeedback" preserve="all" />
     <type fullname="TetrisAnimationManager" preserve="all" />
     <type fullname="TextMeshProOrdering" preserve="all" />
@@ -819,8 +820,8 @@
     <type fullname="UnityEngine.RectOffset" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.UnityEvent`1[System.String]" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.UnityEvent" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.Events.UnityEvent`1[System.Boolean]" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.UnityEvent`1[UnityEngine.GameObject]" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Events.UnityEvent`1[System.Boolean]" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.UnityEvent`2[System.String,System.String]" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.U2D.SpriteBone" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.UnityEvent`1[PuzzlePiece]" preserve="nothing" serialized="true" />
