@@ -419,7 +419,6 @@
     <type fullname="ProgressBar" preserve="all" />
     <type fullname="ProgressbarScript" preserve="all" />
     <type fullname="PuzzlePiece" preserve="all" />
-    <type fullname="QuestionsByLocal" preserve="all" />
     <type fullname="RacerLetterController" preserve="all" />
     <type fullname="RaceRoute" preserve="all" />
     <type fullname="RacerPathImageFiller" preserve="all" />
@@ -620,7 +619,6 @@
     <type fullname="SoundRepositroy/NamedSound" preserve="nothing" serialized="true" />
     <type fullname="AnimalDescriptionByLocal" preserve="nothing" serialized="true" />
     <type fullname="AnimalInfo" preserve="nothing" serialized="true" />
-    <type fullname="QuestionLabels" preserve="nothing" serialized="true" />
     <type fullname="CategoryColorsInfo" preserve="nothing" serialized="true" />
     <type fullname="ColorInfo" preserve="nothing" serialized="true" />
   </assembly>
