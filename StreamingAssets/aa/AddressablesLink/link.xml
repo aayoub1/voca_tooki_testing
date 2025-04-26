@@ -434,6 +434,7 @@
     <type fullname="RoyalItemDisplayer" preserve="all" />
     <type fullname="RTLResponsiveLayout" preserve="all" />
     <type fullname="RTLResponsiveText" preserve="all" />
+    <type fullname="SafeAreaFitter" preserve="all" />
     <type fullname="ScaleBasedOnYPosition" preserve="all" />
     <type fullname="SceneController" preserve="all" />
     <type fullname="SceneNavigatorHandler" preserve="all" />
