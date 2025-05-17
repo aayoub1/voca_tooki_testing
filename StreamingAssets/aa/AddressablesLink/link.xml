@@ -217,6 +217,10 @@
     <type fullname="com.kideo.learn.english.TetrisIntro" preserve="all" />
     <type fullname="com.kideo.learn.english.TextCellsPanelController" preserve="all" />
     <type fullname="com.kideo.learn.english.TextSubTaskCell" preserve="all" />
+    <type fullname="com.kideo.learn.english.TreasureIsland.SubtaskSummaryRow" preserve="all" />
+    <type fullname="com.kideo.learn.english.TreasureIsland.TreasueIslandSceneController" preserve="all" />
+    <type fullname="com.kideo.learn.english.TreasureIsland.TreasureIslandCaregoryArea" preserve="all" />
+    <type fullname="com.kideo.learn.english.TreasureIsland.TreasureIslandTaskSummary" preserve="all" />
     <type fullname="com.kideo.learn.english.TurtleIslandBaseManager" preserve="all" />
     <type fullname="com.kideo.learn.english.TurtleIslandGameManager" preserve="all" />
     <type fullname="com.kideo.learn.english.TurtleScript" preserve="all" />
@@ -414,6 +418,7 @@
     <type fullname="Podium" preserve="all" />
     <type fullname="PointInfo" preserve="all" />
     <type fullname="PointsOrderingPositioner" preserve="all" />
+    <type fullname="PopupEffect" preserve="all" />
     <type fullname="PreviewCloser" preserve="all" />
     <type fullname="PreviewShower" preserve="all" />
     <type fullname="ProgressBar" preserve="all" />
@@ -573,6 +578,7 @@
     <type fullname="GameInfra.ParentControll/NumbWord" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.LevelBaseData" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.MapSection" preserve="nothing" serialized="true" />
+    <type fullname="com.kideo.learn.english.TreasureIsland.CategoryData" preserve="nothing" serialized="true" />
     <type fullname="KKSpeech.SpeechRecognizerListener/AuthorizationCallback" preserve="nothing" serialized="true" />
     <type fullname="KKSpeech.SpeechRecognizerListener/AvailabilityCallback" preserve="nothing" serialized="true" />
     <type fullname="KKSpeech.SpeechRecognizerListener/ErrorCallback" preserve="nothing" serialized="true" />
