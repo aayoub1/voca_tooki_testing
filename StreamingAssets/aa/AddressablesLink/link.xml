@@ -220,6 +220,7 @@
     <type fullname="com.kideo.learn.english.TreasureIsland.SubtaskSummaryRow" preserve="all" />
     <type fullname="com.kideo.learn.english.TreasureIsland.TreasueIslandSceneController" preserve="all" />
     <type fullname="com.kideo.learn.english.TreasureIsland.TreasureIslandCaregoryArea" preserve="all" />
+    <type fullname="com.kideo.learn.english.TreasureIsland.TreasureIslandSubtaskCard" preserve="all" />
     <type fullname="com.kideo.learn.english.TreasureIsland.TreasureIslandTaskSummary" preserve="all" />
     <type fullname="com.kideo.learn.english.TurtleIslandBaseManager" preserve="all" />
     <type fullname="com.kideo.learn.english.TurtleIslandGameManager" preserve="all" />
@@ -423,6 +424,7 @@
     <type fullname="PreviewShower" preserve="all" />
     <type fullname="ProgressBar" preserve="all" />
     <type fullname="ProgressbarScript" preserve="all" />
+    <type fullname="ProgressBarWithMarkers" preserve="all" />
     <type fullname="PuzzlePiece" preserve="all" />
     <type fullname="RacerLetterController" preserve="all" />
     <type fullname="RaceRoute" preserve="all" />
@@ -512,6 +514,7 @@
     <type fullname="TournamentTopLayer" preserve="all" />
     <type fullname="Tracing" preserve="all" />
     <type fullname="TrailsGameManager" preserve="all" />
+    <type fullname="TreasureIslandCategorySummary" preserve="all" />
     <type fullname="TriStateButton" preserve="all" />
     <type fullname="TurtleClickScript" preserve="all" />
     <type fullname="TurtleIslandWorldHandler" preserve="all" />
