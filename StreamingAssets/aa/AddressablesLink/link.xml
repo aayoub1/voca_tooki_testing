@@ -21,6 +21,7 @@
     <type fullname="AvatarBuilder" preserve="all" />
     <type fullname="AvatarBuilderEffectController" preserve="all" />
     <type fullname="AvatarDrag" preserve="all" />
+    <type fullname="BackgroundMusic" preserve="all" />
     <type fullname="BalloonMovement" preserve="all" />
     <type fullname="Base.CameraFitter.CameraSmartFitter" preserve="all" />
     <type fullname="BasicPopup" preserve="all" />
@@ -218,8 +219,8 @@
     <type fullname="com.kideo.learn.english.TextCellsPanelController" preserve="all" />
     <type fullname="com.kideo.learn.english.TextSubTaskCell" preserve="all" />
     <type fullname="com.kideo.learn.english.TreasureIsland.SubtaskSummaryRow" preserve="all" />
-    <type fullname="com.kideo.learn.english.TreasureIsland.TreasueIslandSceneController" preserve="all" />
     <type fullname="com.kideo.learn.english.TreasureIsland.TreasureIslandCaregoryArea" preserve="all" />
+    <type fullname="com.kideo.learn.english.TreasureIsland.TreasureIslandSceneController" preserve="all" />
     <type fullname="com.kideo.learn.english.TreasureIsland.TreasureIslandSubtaskCard" preserve="all" />
     <type fullname="com.kideo.learn.english.TreasureIsland.TreasureIslandTaskSummary" preserve="all" />
     <type fullname="com.kideo.learn.english.TurtleIslandBaseManager" preserve="all" />
@@ -265,6 +266,7 @@
     <type fullname="DragonflyAnimation" preserve="all" />
     <type fullname="DynamicGrid" preserve="all" />
     <type fullname="EggController" preserve="all" />
+    <type fullname="EntranceEffect" preserve="all" />
     <type fullname="ExtraWordEntryNew" preserve="all" />
     <type fullname="ExtraWordsHandlerNew" preserve="all" />
     <type fullname="FailureFeedbackPopup" preserve="all" />
@@ -518,6 +520,7 @@
     <type fullname="TriStateButton" preserve="all" />
     <type fullname="TurtleClickScript" preserve="all" />
     <type fullname="TurtleIslandWorldHandler" preserve="all" />
+    <type fullname="TutorialLayer" preserve="all" />
     <type fullname="TwoColumnsUIFitter" preserve="all" />
     <type fullname="UIGameObjFitter" preserve="all" />
     <type fullname="UIHandler" preserve="all" />
@@ -581,6 +584,7 @@
     <type fullname="GameInfra.ParentControll/NumbWord" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.LevelBaseData" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.MapSection" preserve="nothing" serialized="true" />
+    <type fullname="TutorialStep" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.TreasureIsland.CategoryData" preserve="nothing" serialized="true" />
     <type fullname="KKSpeech.SpeechRecognizerListener/AuthorizationCallback" preserve="nothing" serialized="true" />
     <type fullname="KKSpeech.SpeechRecognizerListener/AvailabilityCallback" preserve="nothing" serialized="true" />
