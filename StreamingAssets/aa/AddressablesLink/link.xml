@@ -2,9 +2,11 @@
   <assembly fullname="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="__I_Spy_Animation_Control" preserve="all" />
     <type fullname="ActivitiesData" preserve="all" />
+    <type fullname="ActivityInfoButton" preserve="all" />
     <type fullname="ActivityInfoComponent" preserve="all" />
     <type fullname="ActivityListPanel" preserve="all" />
     <type fullname="ActivityReplaceToggle" preserve="all" />
+    <type fullname="ActivitySelectionController" preserve="all" />
     <type fullname="ActivitySpawner" preserve="all" />
     <type fullname="AiRacerDriver" preserve="all" />
     <type fullname="AnchorGameObject" preserve="all" />
@@ -105,7 +107,6 @@
     <type fullname="com.kideo.learn.english.DayNightActivityManagement" preserve="all" />
     <type fullname="com.kideo.learn.english.DayNightGameManager" preserve="all" />
     <type fullname="com.kideo.learn.english.DayNightObj" preserve="all" />
-    <type fullname="com.kideo.learn.english.DialogueLevelIcon" preserve="all" />
     <type fullname="com.kideo.learn.english.DocumentSubTaskCell" preserve="all" />
     <type fullname="com.kideo.learn.english.DraggableLineRenderer" preserve="all" />
     <type fullname="com.kideo.learn.english.DragHandler" preserve="all" />
@@ -161,9 +162,7 @@
     <type fullname="com.kideo.learn.english.ListenFindGameManager" preserve="all" />
     <type fullname="com.kideo.learn.english.ListenFindObject" preserve="all" />
     <type fullname="com.kideo.learn.english.MainAnimalController" preserve="all" />
-    <type fullname="com.kideo.learn.english.MapAwardsManager" preserve="all" />
     <type fullname="com.kideo.learn.english.MapGeography" preserve="all" />
-    <type fullname="com.kideo.learn.english.MapTweener" preserve="all" />
     <type fullname="com.kideo.learn.english.MarkPanel" preserve="all" />
     <type fullname="com.kideo.learn.english.MatchTest" preserve="all" />
     <type fullname="com.kideo.learn.english.MatchTestShape" preserve="all" />
@@ -171,6 +170,15 @@
     <type fullname="com.kideo.learn.english.MemoryActivityManagerScript" preserve="all" />
     <type fullname="com.kideo.learn.english.MoleActivityManager" preserve="all" />
     <type fullname="com.kideo.learn.english.NewBubblesAreaHandler" preserve="all" />
+    <type fullname="com.kideo.learn.english.NewMap.LessonLevelIcon" preserve="all" />
+    <type fullname="com.kideo.learn.english.NewMap.Map" preserve="all" />
+    <type fullname="com.kideo.learn.english.NewMap.MapAwardAnimation" preserve="all" />
+    <type fullname="com.kideo.learn.english.NewMap.MapAwardController" preserve="all" />
+    <type fullname="com.kideo.learn.english.NewMap.MapAwardMultipleSprites" preserve="all" />
+    <type fullname="com.kideo.learn.english.NewMap.MapController" preserve="all" />
+    <type fullname="com.kideo.learn.english.NewMap.MapLevelIconBase" preserve="all" />
+    <type fullname="com.kideo.learn.english.NewMap.MapSection" preserve="all" />
+    <type fullname="com.kideo.learn.english.NewMap.TestLevelIcon" preserve="all" />
     <type fullname="com.kideo.learn.english.NewMemoryCardsPositioner" preserve="all" />
     <type fullname="com.kideo.learn.english.NewMemoryGameManager" preserve="all" />
     <type fullname="com.kideo.learn.english.ObjectPatrol" preserve="all" />
@@ -195,7 +203,6 @@
     <type fullname="com.kideo.learn.english.RadarGameManager" preserve="all" />
     <type fullname="com.kideo.learn.english.RadarObjectController" preserve="all" />
     <type fullname="com.kideo.learn.english.RadarQuarter" preserve="all" />
-    <type fullname="com.kideo.learn.english.RcLevelIcon" preserve="all" />
     <type fullname="com.kideo.learn.english.ReadingComprehensionTaskManager" preserve="all" />
     <type fullname="com.kideo.learn.english.Rocket" preserve="all" />
     <type fullname="com.kideo.learn.english.RocketGameManager" preserve="all" />
@@ -217,7 +224,6 @@
     <type fullname="com.kideo.learn.english.TabHandler" preserve="all" />
     <type fullname="com.kideo.learn.english.TabsController" preserve="all" />
     <type fullname="com.kideo.learn.english.TaskCell" preserve="all" />
-    <type fullname="com.kideo.learn.english.TaskLevelIcon" preserve="all" />
     <type fullname="com.kideo.learn.english.TaskManager" preserve="all" />
     <type fullname="com.kideo.learn.english.TestsManager" preserve="all" />
     <type fullname="com.kideo.learn.english.TetrisActivityManager" preserve="all" />
@@ -239,7 +245,6 @@
     <type fullname="com.kideo.learn.english.VideoSubTaskCell" preserve="all" />
     <type fullname="com.kideo.learn.english.VoiceControl" preserve="all" />
     <type fullname="com.kideo.learn.english.VoiceSubTaskCell" preserve="all" />
-    <type fullname="com.kideo.learn.english.VTLevelIcon" preserve="all" />
     <type fullname="com.kideo.learn.english.WordAudioObject" preserve="all" />
     <type fullname="com.kideo.learn.english.WordAudioShape" preserve="all" />
     <type fullname="com.kideo.learn.english.WordAudioTest" preserve="all" />
@@ -248,8 +253,6 @@
     <type fullname="com.kideo.learn.english.WordMeaningTest" preserve="all" />
     <type fullname="com.kideo.learn.english.WordPanelViewRound" preserve="all" />
     <type fullname="com.kideo.learn.english.WordTreeActivityManagement" preserve="all" />
-    <type fullname="com.kideo.learn.english.WorldAnimal" preserve="all" />
-    <type fullname="com.kideo.learn.english.WorldAnimalsPositioner" preserve="all" />
     <type fullname="CompetitionResultsController" preserve="all" />
     <type fullname="ConfirmationPopup" preserve="all" />
     <type fullname="ContextWithMissingWordQuestion" preserve="all" />
@@ -396,13 +399,11 @@
     <type fullname="LettersSpawner" preserve="all" />
     <type fullname="LettersSpritesDataScriptableObject" preserve="all" />
     <type fullname="LetterWordListPanel" preserve="all" />
-    <type fullname="LevelIcon" preserve="all" />
-    <type fullname="LevelSpawner" preserve="all" />
     <type fullname="LifeBarScript" preserve="all" />
     <type fullname="LoadingPanel" preserve="all" />
     <type fullname="LocalizedText" preserve="all" />
     <type fullname="ManageSpriteScale" preserve="all" />
-    <type fullname="MapManager" preserve="all" />
+    <type fullname="MapPool" preserve="all" />
     <type fullname="MenuPanel" preserve="all" />
     <type fullname="MicAnimationHandler" preserve="all" />
     <type fullname="MoleController" preserve="all" />
@@ -430,7 +431,6 @@
     <type fullname="PlayersTableController" preserve="all" />
     <type fullname="PlayPauseAudioButton" preserve="all" />
     <type fullname="Podium" preserve="all" />
-    <type fullname="PointInfo" preserve="all" />
     <type fullname="PointsOrderingPositioner" preserve="all" />
     <type fullname="PopupEffect" preserve="all" />
     <type fullname="PreviewCloser" preserve="all" />
@@ -459,7 +459,6 @@
     <type fullname="SceneController" preserve="all" />
     <type fullname="SceneNavigatorHandler" preserve="all" />
     <type fullname="ScoreCounter" preserve="all" />
-    <type fullname="ScoreStars" preserve="all" />
     <type fullname="ScreenEdgeColliders" preserve="all" />
     <type fullname="ScreenFadeEffect" preserve="all" />
     <type fullname="ScrollView" preserve="all" />
@@ -570,11 +569,14 @@
     <type fullname="WordTreeManager" preserve="all" />
     <type fullname="WrongAnswerEffect" preserve="all" />
     <type fullname="YesNoPopup" preserve="all" />
+    <type fullname="CategoryGroupInfo" preserve="nothing" serialized="true" />
     <type fullname="UIRefData/UITextElement" preserve="nothing" serialized="true" />
+    <type fullname="com.kideo.learn.english.NewMap.LevelIconEntry" preserve="nothing" serialized="true" />
+    <type fullname="com.kideo.learn.english.NewMap.MapPath" preserve="nothing" serialized="true" />
+    <type fullname="com.kideo.learn.english.NewMap.PathArea" preserve="nothing" serialized="true" />
     <type fullname="ActivityInfo" preserve="nothing" serialized="true" />
     <type fullname="SceneNavigator/SceneId" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.SubTaskAnswer" preserve="nothing" serialized="true" />
-    <type fullname="CategoryGroupInfo" preserve="nothing" serialized="true" />
     <type fullname="ItemCostInfo" preserve="nothing" serialized="true" />
     <type fullname="LocalizedSpriteInfo" preserve="nothing" serialized="true" />
     <type fullname="SpriteInfo" preserve="nothing" serialized="true" />
@@ -593,8 +595,7 @@
     <type fullname="GameInfra.LeaderBoard.LBRequest" preserve="nothing" serialized="true" />
     <type fullname="GameInfra.LeaderBoard.LBTab" preserve="nothing" serialized="true" />
     <type fullname="GameInfra.ParentControll/NumbWord" preserve="nothing" serialized="true" />
-    <type fullname="com.kideo.learn.english.LevelBaseData" preserve="nothing" serialized="true" />
-    <type fullname="com.kideo.learn.english.MapSection" preserve="nothing" serialized="true" />
+    <type fullname="MapPool/MapPoolEntry" preserve="nothing" serialized="true" />
     <type fullname="TutorialStep" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.TreasureIsland.CategoryData" preserve="nothing" serialized="true" />
     <type fullname="KKSpeech.SpeechRecognizerListener/AuthorizationCallback" preserve="nothing" serialized="true" />
@@ -619,8 +620,7 @@
     <type fullname="RacersConfigrations" preserve="nothing" serialized="true" />
     <type fullname="RacersSettings" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.gameinfra.Dialogue.AIModel" preserve="nothing" serialized="true" />
-    <type fullname="com.kideo.gameinfra.Dialogue.CharacterInfo" preserve="nothing" serialized="true" />
-    <type fullname="com.kideo.gameinfra.Dialogue.CharacterProfile" preserve="nothing" serialized="true" />
+    <type fullname="com.kideo.gameinfra.Dialogue.CharacterAssets" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.gameinfra.Dialogue.DialogueEntryConfig" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.gameinfra.Dialogue.Prompts" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.gameinfra.Dialogue.TextPricing" preserve="nothing" serialized="true" />
@@ -744,6 +744,11 @@
     <type fullname="UnityEngine.U2D.IK.IKChain2D" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.U2D.IK.IKManager2D/SolverEditorData" preserve="nothing" serialized="true" />
   </assembly>
+  <assembly fullname="Unity.2D.SpriteShape.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.U2D.SpriteShapeController" preserve="all" />
+    <type fullname="UnityEngine.U2D.Spline" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.U2D.SplineControlPoint" preserve="nothing" serialized="true" />
+  </assembly>
   <assembly fullname="Unity.Addressables, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" preserve="all">
     <type fullname="UnityEngine.AddressableAssets.Addressables" preserve="all" />
     <type fullname="UnityEngine.AddressableAssets.AssetReference" preserve="nothing" serialized="true" />
@@ -754,6 +759,7 @@
     <type fullname="UnityEngine.Localization.Tables.AssetTable" preserve="all" />
     <type fullname="UnityEngine.Localization.Tables.SharedTableData" preserve="all" />
     <type fullname="UnityEngine.Localization.Tables.StringTable" preserve="all" />
+    <type fullname="UnityEngine.Localization.Events.UnityEventString" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Localization.LocalizedString" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Localization.Tables.TableEntryReference" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Localization.Tables.TableReference" preserve="nothing" serialized="true" />
@@ -764,7 +770,6 @@
     <type fullname="UnityEngine.Localization.Tables.SharedTableData/SharedTableEntry" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Localization.Metadata.SmartFormatTag" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Localization.Tables.TableEntryData" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.Localization.Events.UnityEventString" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Localization.LocalizedAudioClip" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="Unity.ProBuilder, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
@@ -869,9 +874,9 @@
     <type fullname="UnityEngine.Events.ArgumentCache" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.PersistentCallGroup" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.PersistentListenerMode" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Events.UnityEvent" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.UnityEvent`1[System.String]" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.RectOffset" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.Events.UnityEvent" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.UnityEvent`1[UnityEngine.GameObject]" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.UnityEvent`1[System.Boolean]" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.UnityEvent`2[System.String,System.String]" preserve="nothing" serialized="true" />
@@ -903,6 +908,9 @@
   <assembly fullname="UnityEngine.SpriteMaskModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="UnityEngine.SpriteMask" preserve="all" />
   </assembly>
+  <assembly fullname="UnityEngine.SpriteShapeModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.U2D.SpriteShapeRenderer" preserve="all" />
+  </assembly>
   <assembly fullname="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="UnityEngine.Font" preserve="all" />
   </assembly>
@@ -933,17 +941,17 @@
     <type fullname="UnityEngine.UI.Toggle" preserve="all" />
     <type fullname="UnityEngine.UI.ToggleGroup" preserve="all" />
     <type fullname="UnityEngine.UI.VerticalLayoutGroup" preserve="all" />
+    <type fullname="UnityEngine.EventSystems.EventTrigger/Entry" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.EventSystems.EventTrigger/TriggerEvent" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.MaskableGraphic/CullStateChangedEvent" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.AnimationTriggers" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.Button/ButtonClickedEvent" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.ColorBlock" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.FontData" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.UI.MaskableGraphic/CullStateChangedEvent" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.Navigation" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.ScrollRect/ScrollRectEvent" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.SpriteState" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.Toggle/ToggleEvent" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.EventSystems.EventTrigger/Entry" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.EventSystems.EventTrigger/TriggerEvent" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.Scrollbar/ScrollEvent" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.Dropdown/DropdownEvent" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.Dropdown/OptionData" preserve="nothing" serialized="true" />
