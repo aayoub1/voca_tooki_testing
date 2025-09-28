@@ -8,6 +8,7 @@
     <type fullname="ActivityReplaceToggle" preserve="all" />
     <type fullname="ActivitySelectionController" preserve="all" />
     <type fullname="ActivitySpawner" preserve="all" />
+    <type fullname="AiDialogueLevelIcon" preserve="all" />
     <type fullname="AiRacerDriver" preserve="all" />
     <type fullname="AnchorGameObject" preserve="all" />
     <type fullname="AnimalFactory" preserve="all" />
@@ -53,6 +54,7 @@
     <type fullname="CoinsCounter" preserve="all" />
     <type fullname="ColorsLibrary" preserve="all" />
     <type fullname="com.kideo.gameinfra.animation.AnimationsCollection" preserve="all" />
+    <type fullname="com.kideo.gameinfra.animation.AnimatorParameterSetter" preserve="all" />
     <type fullname="com.kideo.gameinfra.controls.MultiValueToggle" preserve="all" />
     <type fullname="com.kideo.gameinfra.Dialogue.AIDialogueController" preserve="all" />
     <type fullname="com.kideo.gameinfra.Dialogue.AIDialoguesRepository" preserve="all" />
@@ -162,7 +164,6 @@
     <type fullname="com.kideo.learn.english.ListenFindGameManager" preserve="all" />
     <type fullname="com.kideo.learn.english.ListenFindObject" preserve="all" />
     <type fullname="com.kideo.learn.english.MainAnimalController" preserve="all" />
-    <type fullname="com.kideo.learn.english.MapGeography" preserve="all" />
     <type fullname="com.kideo.learn.english.MarkPanel" preserve="all" />
     <type fullname="com.kideo.learn.english.MatchTest" preserve="all" />
     <type fullname="com.kideo.learn.english.MatchTestShape" preserve="all" />
@@ -176,7 +177,6 @@
     <type fullname="com.kideo.learn.english.NewMap.MapAwardController" preserve="all" />
     <type fullname="com.kideo.learn.english.NewMap.MapAwardMultipleSprites" preserve="all" />
     <type fullname="com.kideo.learn.english.NewMap.MapController" preserve="all" />
-    <type fullname="com.kideo.learn.english.NewMap.MapLevelIconBase" preserve="all" />
     <type fullname="com.kideo.learn.english.NewMap.MapSection" preserve="all" />
     <type fullname="com.kideo.learn.english.NewMap.TestLevelIcon" preserve="all" />
     <type fullname="com.kideo.learn.english.NewMemoryCardsPositioner" preserve="all" />
@@ -272,6 +272,7 @@
     <type fullname="DescriptionTask" preserve="all" />
     <type fullname="DevTestToolController" preserve="all" />
     <type fullname="DialogueEntryOptionsRecorder" preserve="all" />
+    <type fullname="DialogueLevelIcon" preserve="all" />
     <type fullname="DialogueSelectionButton" preserve="all" />
     <type fullname="DragDrop" preserve="all" />
     <type fullname="DragonflyAnimation" preserve="all" />
@@ -745,7 +746,10 @@
     <type fullname="UnityEngine.U2D.IK.IKManager2D/SolverEditorData" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="Unity.2D.SpriteShape.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.U2D.SpriteShape" preserve="all" />
     <type fullname="UnityEngine.U2D.SpriteShapeController" preserve="all" />
+    <type fullname="UnityEngine.U2D.AngleRange" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.U2D.CornerSprite" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.U2D.Spline" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.U2D.SplineControlPoint" preserve="nothing" serialized="true" />
   </assembly>
