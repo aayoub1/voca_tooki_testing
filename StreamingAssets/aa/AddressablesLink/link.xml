@@ -445,6 +445,7 @@
     <type fullname="RacerPathImageFiller" preserve="all" />
     <type fullname="RacerUIConfigration" preserve="all" />
     <type fullname="Raft" preserve="all" />
+    <type fullname="RCLevelIcon" preserve="all" />
     <type fullname="ReunionManager" preserve="all" />
     <type fullname="RingsActivityManagement" preserve="all" />
     <type fullname="RingsGameManager" preserve="all" />
@@ -501,6 +502,7 @@
     <type fullname="StartSceneButtonsHandler" preserve="all" />
     <type fullname="StartSceneController" preserve="all" />
     <type fullname="StoneHandler" preserve="all" />
+    <type fullname="TaskLevelIcon" preserve="all" />
     <type fullname="TaskSubmitButton" preserve="all" />
     <type fullname="TestGameScript" preserve="all" />
     <type fullname="TestScoreEntery" preserve="all" />
