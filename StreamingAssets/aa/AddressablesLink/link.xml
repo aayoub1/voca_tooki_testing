@@ -210,7 +210,6 @@
     <type fullname="com.kideo.learn.english.RotateAirplane" preserve="all" />
     <type fullname="com.kideo.learn.english.RotateParashoot" preserve="all" />
     <type fullname="com.kideo.learn.english.SceneHints" preserve="all" />
-    <type fullname="com.kideo.learn.english.ScoreHandlerData" preserve="all" />
     <type fullname="com.kideo.learn.english.SearchActivityManagement" preserve="all" />
     <type fullname="com.kideo.learn.english.SearchGameManager" preserve="all" />
     <type fullname="com.kideo.learn.english.SearchObj" preserve="all" />
@@ -572,6 +571,7 @@
     <type fullname="WordTreeManager" preserve="all" />
     <type fullname="WrongAnswerEffect" preserve="all" />
     <type fullname="YesNoPopup" preserve="all" />
+    <type fullname="MapPool/MapPoolEntry" preserve="nothing" serialized="true" />
     <type fullname="UIRefData/UITextElement" preserve="nothing" serialized="true" />
     <type fullname="ActivityInfo" preserve="nothing" serialized="true" />
     <type fullname="SceneNavigator/SceneId" preserve="nothing" serialized="true" />
@@ -595,7 +595,6 @@
     <type fullname="GameInfra.LeaderBoard.LBRequest" preserve="nothing" serialized="true" />
     <type fullname="GameInfra.LeaderBoard.LBTab" preserve="nothing" serialized="true" />
     <type fullname="GameInfra.ParentControll/NumbWord" preserve="nothing" serialized="true" />
-    <type fullname="MapPool/MapPoolEntry" preserve="nothing" serialized="true" />
     <type fullname="TutorialStep" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.TreasureIsland.CategoryData" preserve="nothing" serialized="true" />
     <type fullname="KKSpeech.SpeechRecognizerListener/AuthorizationCallback" preserve="nothing" serialized="true" />
@@ -647,13 +646,12 @@
     <type fullname="com.kideo.learn.english.NewMap.MapPath" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.NewMap.PathArea" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.Feedback.ResultDef" preserve="nothing" serialized="true" />
-    <type fullname="ThirdActivityInfo" preserve="nothing" serialized="true" />
-    <type fullname="com.kideo.learn.english.LetterRowData" preserve="nothing" serialized="true" />
     <type fullname="SoundRepositroy/NamedSound" preserve="nothing" serialized="true" />
     <type fullname="AnimalDescriptionByLocal" preserve="nothing" serialized="true" />
     <type fullname="AnimalInfo" preserve="nothing" serialized="true" />
     <type fullname="CategoryColorsInfo" preserve="nothing" serialized="true" />
     <type fullname="ColorInfo" preserve="nothing" serialized="true" />
+    <type fullname="ThirdActivityInfo" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="FrostweepGames.Plugins.WebGLFileBrowser.Examples.WebGlFileBrowserHandler" preserve="all" />
@@ -726,9 +724,9 @@
     <type fullname="uLipSync.uLipSync" preserve="all" />
     <type fullname="uLipSync.uLipSyncTexture" preserve="all" />
     <type fullname="uLipSync.LipSyncUpdateEvent" preserve="nothing" serialized="true" />
+    <type fullname="uLipSync.uLipSyncTexture/TextureInfo" preserve="nothing" serialized="true" />
     <type fullname="uLipSync.MfccCalibrationData" preserve="nothing" serialized="true" />
     <type fullname="uLipSync.MfccData" preserve="nothing" serialized="true" />
-    <type fullname="uLipSync.uLipSyncTexture/TextureInfo" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="Unity.2D.Animation.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="UnityEngine.U2D.Animation.SkeletonAsset" preserve="all" />
@@ -750,10 +748,10 @@
   <assembly fullname="Unity.2D.SpriteShape.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="UnityEngine.U2D.SpriteShape" preserve="all" />
     <type fullname="UnityEngine.U2D.SpriteShapeController" preserve="all" />
-    <type fullname="UnityEngine.U2D.AngleRange" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.U2D.CornerSprite" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.U2D.Spline" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.U2D.SplineControlPoint" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.U2D.AngleRange" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.U2D.CornerSprite" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="Unity.Addressables, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" preserve="all">
     <type fullname="UnityEngine.AddressableAssets.Addressables" preserve="all" />
