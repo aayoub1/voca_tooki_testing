@@ -9,12 +9,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="unity-webview.js"></script>
     <script src="libmp3lame.js"></script>
- 
-<script src="https://unpkg.com/mic-recorder-to-mp3@2.2.1/dist/index.min.js"></script>
- 
+  
     <!-- MICROPHONE PRO START -->
     <script src='./microphone.js'></script>
     <!-- MICROPHONE PRO END -->
+<script src="https://unpkg.com/mic-recorder-to-mp3@2.2.1/dist/index.min.js"></script>
+
 </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -33,15 +33,15 @@
     </div>
     <script>
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/VOCA.loader.js";
+      var loaderUrl = buildUrl + "/web_vt_4.1.2_3.loader.js";
       var config = {
-        dataUrl: buildUrl + "/VOCA.data.unityweb",
-        frameworkUrl: buildUrl + "/VOCA.framework.js.unityweb",
-        codeUrl: buildUrl + "/VOCA.wasm.unityweb",
+        dataUrl: buildUrl + "/web_vt_4.1.2_3.data.unityweb",
+        frameworkUrl: buildUrl + "/web_vt_4.1.2_3.framework.js.unityweb",
+        codeUrl: buildUrl + "/web_vt_4.1.2_3.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Kideo Tech",
         productName: "Voca Tooki",
-        productVersion: "4.1.1",
+        productVersion: "4.1.2",
       };
 
       var container = document.querySelector("#unity-container");
