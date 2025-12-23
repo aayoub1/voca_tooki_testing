@@ -125,6 +125,7 @@
     <type fullname="com.kideo.learn.english.DragHandler" preserve="all" />
     <type fullname="com.kideo.learn.english.EnglishFishermanActivityScene" preserve="all" />
     <type fullname="com.kideo.learn.english.EnglishTurtleIslandActivityScene" preserve="all" />
+    <type fullname="com.kideo.learn.english.Events.PretestButton" preserve="all" />
     <type fullname="com.kideo.learn.english.Feedback.FeedbackPopup" preserve="all" />
     <type fullname="com.kideo.learn.english.Feedback.FeedbackResultsRow" preserve="all" />
     <type fullname="com.kideo.learn.english.FeedbackHandler" preserve="all" />
