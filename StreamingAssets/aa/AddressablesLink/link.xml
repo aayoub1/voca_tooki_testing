@@ -191,6 +191,7 @@
     <type fullname="com.kideo.learn.english.NewMap.MapController" preserve="all" />
     <type fullname="com.kideo.learn.english.NewMap.MapSection" preserve="all" />
     <type fullname="com.kideo.learn.english.NewMap.TestLevelIcon" preserve="all" />
+    <type fullname="com.kideo.learn.english.NewMap.UILevelTether" preserve="all" />
     <type fullname="com.kideo.learn.english.NewMemoryCardsPositioner" preserve="all" />
     <type fullname="com.kideo.learn.english.NewMemoryGameManager" preserve="all" />
     <type fullname="com.kideo.learn.english.ObjectPatrol" preserve="all" />
