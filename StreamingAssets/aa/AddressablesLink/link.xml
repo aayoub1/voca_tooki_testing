@@ -21,6 +21,9 @@
     <type fullname="animationTargetScript" preserve="all" />
     <type fullname="AppVersion" preserve="all" />
     <type fullname="Assets.Activities.CrossWords.Scripts.ActivityManager" preserve="all" />
+    <type fullname="Audiobook" preserve="all" />
+    <type fullname="AudiobookPage" preserve="all" />
+    <type fullname="AudiobookParagraph" preserve="all" />
     <type fullname="AvatarBuilder" preserve="all" />
     <type fullname="AvatarBuilderEffectController" preserve="all" />
     <type fullname="AvatarDrag" preserve="all" />
@@ -54,6 +57,13 @@
     <type fullname="CloudsManager" preserve="all" />
     <type fullname="CoinsCounter" preserve="all" />
     <type fullname="ColorsLibrary" preserve="all" />
+    <type fullname="com.kideo.audiobook.AudiobookBookCategoryToggle" preserve="all" />
+    <type fullname="com.kideo.audiobook.AudiobookBookPreviewPanel" preserve="all" />
+    <type fullname="com.kideo.audiobook.AudiobookLibraryCard" preserve="all" />
+    <type fullname="com.kideo.audiobook.AudiobookLibraryController" preserve="all" />
+    <type fullname="com.kideo.audiobook.AudiobookPlayer" preserve="all" />
+    <type fullname="com.kideo.audiobook.AudiobookPlayerControlsPanel" preserve="all" />
+    <type fullname="com.kideo.audiobook.AudiobookRepo" preserve="all" />
     <type fullname="com.kideo.gameinfra.animation.AnimationsCollection" preserve="all" />
     <type fullname="com.kideo.gameinfra.animation.AnimatorParameterSetter" preserve="all" />
     <type fullname="com.kideo.gameinfra.controls.MultiValueToggle" preserve="all" />
@@ -521,6 +531,7 @@
     <type fullname="ToggleButtonGroup" preserve="all" />
     <type fullname="ToggleGameObject" preserve="all" />
     <type fullname="ToggleHandler" preserve="all" />
+    <type fullname="ToggleTextColor" preserve="all" />
     <type fullname="TosteButton" preserve="all" />
     <type fullname="TouchPanelHandler" preserve="all" />
     <type fullname="TournamentInfoSlot" preserve="all" />
@@ -629,6 +640,7 @@
     <type fullname="ItemCostInfo" preserve="nothing" serialized="true" />
     <type fullname="LocalizedSpriteInfo" preserve="nothing" serialized="true" />
     <type fullname="SpriteInfo" preserve="nothing" serialized="true" />
+    <type fullname="com.kideo.audiobook.AudiobookData" preserve="nothing" serialized="true" />
     <type fullname="ThirdActivityInfo" preserve="nothing" serialized="true" />
     <type fullname="SoundRepositroy/NamedSound" preserve="nothing" serialized="true" />
     <type fullname="RacersConfigrations" preserve="nothing" serialized="true" />
