@@ -145,6 +145,7 @@
     <type fullname="com.kideo.learn.english.Frogger.FroggerEnemy" preserve="all" />
     <type fullname="com.kideo.learn.english.Frogger.FroggerGameManager" preserve="all" />
     <type fullname="com.kideo.learn.english.Frogger.FroggerPlatform" preserve="all" />
+    <type fullname="com.kideo.learn.english.GameModes.GameModeSpecificControl" preserve="all" />
     <type fullname="com.kideo.learn.english.GeneralAnimationMapping" preserve="all" />
     <type fullname="com.kideo.learn.english.GridLayoutController" preserve="all" />
     <type fullname="com.kideo.learn.english.GuestTestsByGrade" preserve="all" />
@@ -297,6 +298,7 @@
     <type fullname="DragDrop" preserve="all" />
     <type fullname="DragonflyAnimation" preserve="all" />
     <type fullname="DynamicGrid" preserve="all" />
+    <type fullname="DynamicSplitViewText" preserve="all" />
     <type fullname="EggController" preserve="all" />
     <type fullname="EntranceEffect" preserve="all" />
     <type fullname="ExtraWordEntryNew" preserve="all" />
