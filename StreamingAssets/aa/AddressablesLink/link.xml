@@ -26,7 +26,6 @@
     <type fullname="AudiobookParagraph" preserve="all" />
     <type fullname="AvatarBuilder" preserve="all" />
     <type fullname="AvatarBuilderEffectController" preserve="all" />
-    <type fullname="AvatarDrag" preserve="all" />
     <type fullname="AZKit.MobileKeyboardRaiser.KeyboardHeightDetector" preserve="all" />
     <type fullname="BackgroundMusic" preserve="all" />
     <type fullname="BalloonMovement" preserve="all" />
@@ -505,13 +504,12 @@
     <type fullname="SettingsPopupController" preserve="all" />
     <type fullname="ShakeScript" preserve="all" />
     <type fullname="SharkFollowPlayer" preserve="all" />
-    <type fullname="SharkNavigation" preserve="all" />
     <type fullname="SharksGamePlay" preserve="all" />
     <type fullname="SharksManagement" preserve="all" />
     <type fullname="SharksMap" preserve="all" />
     <type fullname="SharksMapManager" preserve="all" />
     <type fullname="SharksRandomMovement" preserve="all" />
-    <type fullname="SharksScene" preserve="all" />
+    <type fullname="SharkTrap" preserve="all" />
     <type fullname="ShopLocalization" preserve="all" />
     <type fullname="ShopSpritesInfo" preserve="all" />
     <type fullname="ShuffledContextQuestion" preserve="all" />
@@ -531,6 +529,7 @@
     <type fullname="StartSceneButtonsHandler" preserve="all" />
     <type fullname="StartSceneController" preserve="all" />
     <type fullname="StoneHandler" preserve="all" />
+    <type fullname="SubTaskFeedback" preserve="all" />
     <type fullname="SubtaskLayoutConfig" preserve="all" />
     <type fullname="SubtasksBuilder" preserve="all" />
     <type fullname="TaskLayoutManager" preserve="all" />
@@ -589,6 +588,7 @@
     <type fullname="UserData" preserve="all" />
     <type fullname="VendingMachineLight" preserve="all" />
     <type fullname="VerticalCardCarousel" preserve="all" />
+    <type fullname="VoiceControl" preserve="all" />
     <type fullname="VoiceRecoginitionResultsView" preserve="all" />
     <type fullname="VoiceRecognition" preserve="all" />
     <type fullname="VoiceRecognitionTuningLayer" preserve="all" />
@@ -633,6 +633,7 @@
     <type fullname="SceneNavigator/SceneId" preserve="nothing" serialized="true" />
     <type fullname="TutorialStep" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.gameinfra.Dialogue.DialogueEntryConfig" preserve="nothing" serialized="true" />
+    <type fullname="MapUIPadding" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.gameinfra.controls.MultiValueToggleOption" preserve="nothing" serialized="true" />
     <type fullname="LetterAsset" preserve="nothing" serialized="true" />
     <type fullname="LettersDisplaySetting" preserve="nothing" serialized="true" />
