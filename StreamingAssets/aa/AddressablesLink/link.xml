@@ -26,6 +26,7 @@
     <type fullname="AudiobookParagraph" preserve="all" />
     <type fullname="AvatarBuilder" preserve="all" />
     <type fullname="AvatarBuilderEffectController" preserve="all" />
+    <type fullname="AvatarDrag" preserve="all" />
     <type fullname="AZKit.MobileKeyboardRaiser.KeyboardHeightDetector" preserve="all" />
     <type fullname="BackgroundMusic" preserve="all" />
     <type fullname="BalloonMovement" preserve="all" />
@@ -129,6 +130,7 @@
     <type fullname="com.kideo.learn.english.EnglishTurtleIslandActivityScene" preserve="all" />
     <type fullname="com.kideo.learn.english.Events.EventCard" preserve="all" />
     <type fullname="com.kideo.learn.english.Events.EventsSceneController" preserve="all" />
+    <type fullname="com.kideo.learn.english.Events.EventTopLayer" preserve="all" />
     <type fullname="com.kideo.learn.english.Events.PretestButton" preserve="all" />
     <type fullname="com.kideo.learn.english.Feedback.FeedbackPopup" preserve="all" />
     <type fullname="com.kideo.learn.english.Feedback.FeedbackResultsRow" preserve="all" />
@@ -272,6 +274,8 @@
     <type fullname="com.kideo.learn.english.WordPanelViewRound" preserve="all" />
     <type fullname="com.kideo.learn.english.WordTreeActivityManagement" preserve="all" />
     <type fullname="CompetitionResultsController" preserve="all" />
+    <type fullname="Configs.BrushSettings" preserve="all" />
+    <type fullname="Configs.GameSettings" preserve="all" />
     <type fullname="ConfirmationPopup" preserve="all" />
     <type fullname="ContextWithMissingWordQuestion" preserve="all" />
     <type fullname="ContextWithMissingWordTest" preserve="all" />
@@ -296,10 +300,16 @@
     <type fullname="DocumentSubtask" preserve="all" />
     <type fullname="DragDrop" preserve="all" />
     <type fullname="DragonflyAnimation" preserve="all" />
+    <type fullname="DrawinAssetHolder" preserve="all" />
+    <type fullname="Drawing.DrawingManager" preserve="all" />
+    <type fullname="Drawing.Fusion.DrawingNetworkHandler" preserve="all" />
+    <type fullname="Drawing.InputHandler" preserve="all" />
+    <type fullname="DrawinHostBridgeSO" preserve="all" />
     <type fullname="DynamicGrid" preserve="all" />
     <type fullname="DynamicSplitViewText" preserve="all" />
     <type fullname="EggController" preserve="all" />
     <type fullname="EntranceEffect" preserve="all" />
+    <type fullname="EventAssetsRepo" preserve="all" />
     <type fullname="ExtraWordEntryNew" preserve="all" />
     <type fullname="ExtraWordsHandlerNew" preserve="all" />
     <type fullname="FailureFeedbackPopup" preserve="all" />
@@ -428,6 +438,10 @@
     <type fullname="LifeBarScript" preserve="all" />
     <type fullname="LoadingPanel" preserve="all" />
     <type fullname="LocalizedText" preserve="all" />
+    <type fullname="Managers.GameUIController" preserve="all" />
+    <type fullname="Managers.LobbyManager" preserve="all" />
+    <type fullname="Managers.MainManager" preserve="all" />
+    <type fullname="Managers.MainMenuManager" preserve="all" />
     <type fullname="ManageSpriteScale" preserve="all" />
     <type fullname="MapPool" preserve="all" />
     <type fullname="MenuPanel" preserve="all" />
@@ -440,6 +454,12 @@
     <type fullname="MultipleChoicesTask" preserve="all" />
     <type fullname="MultipleChoiceSubtask" preserve="all" />
     <type fullname="NativeLanguageModeHandler" preserve="all" />
+    <type fullname="Network.GameMainManager" preserve="all" />
+    <type fullname="Network.GameNetworkHandler" preserve="all" />
+    <type fullname="Network.GameStateManager" preserve="all" />
+    <type fullname="Network.MessagesNetworkHandler" preserve="all" />
+    <type fullname="Network.NetworkConnector" preserve="all" />
+    <type fullname="Network.NetworkPlayerManager" preserve="all" />
     <type fullname="NewClickableKeyboard" preserve="all" />
     <type fullname="NewMemoryAreaHandler" preserve="all" />
     <type fullname="NotificationIndicator" preserve="all" />
@@ -453,6 +473,8 @@
     <type fullname="PathCreation.Examples.PathPlacer" preserve="all" />
     <type fullname="PictureInfo" preserve="all" />
     <type fullname="PipeJunctionObject" preserve="all" />
+    <type fullname="Player.NewPlayerData" preserve="all" />
+    <type fullname="Player.NewPlayerSpawner" preserve="all" />
     <type fullname="PlayerController" preserve="all" />
     <type fullname="PlayerInfoPanel" preserve="all" />
     <type fullname="PlayerMovement" preserve="all" />
@@ -571,6 +593,22 @@
     <type fullname="TurtleIslandWorldHandler" preserve="all" />
     <type fullname="TutorialLayer" preserve="all" />
     <type fullname="TwoColumnsUIFitter" preserve="all" />
+    <type fullname="UI.DrawingUI" preserve="all" />
+    <type fullname="UI.EndGameUI" preserve="all" />
+    <type fullname="UI.Extra.HandleInformativePopup" preserve="all" />
+    <type fullname="UI.Extra.LoadingCircleController" preserve="all" />
+    <type fullname="UI.Extra.PlayerAvatarUI" preserve="all" />
+    <type fullname="UI.Extra.PopUpController" preserve="all" />
+    <type fullname="UI.GuessingUI" preserve="all" />
+    <type fullname="UI.KeyboardUI" preserve="all" />
+    <type fullname="UI.LobbyDrawingUI" preserve="all" />
+    <type fullname="UI.LobbyUI" preserve="all" />
+    <type fullname="UI.MainMenuUI" preserve="all" />
+    <type fullname="UI.MessagesUI" preserve="all" />
+    <type fullname="UI.RoundEndUI" preserve="all" />
+    <type fullname="UI.ScoresEntryUI" preserve="all" />
+    <type fullname="UI.ScoresUI" preserve="all" />
+    <type fullname="UI.WordSelectionUI" preserve="all" />
     <type fullname="UIGameObjFitter" preserve="all" />
     <type fullname="UIHandler" preserve="all" />
     <type fullname="UIRefData" preserve="all" />
@@ -612,6 +650,7 @@
     <type fullname="WordTreeManager" preserve="all" />
     <type fullname="WrongAnswerEffect" preserve="all" />
     <type fullname="YesNoPopup" preserve="all" />
+    <type fullname="CategoryGroupInfo" preserve="nothing" serialized="true" />
     <type fullname="MapPool/MapPoolEntry" preserve="nothing" serialized="true" />
     <type fullname="UIRefData/UITextElement" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.gameinfra.Dialogue.AIModel" preserve="nothing" serialized="true" />
@@ -624,7 +663,6 @@
     <type fullname="LetterDisplayColors" preserve="nothing" serialized="true" />
     <type fullname="ShapeOptions" preserve="nothing" serialized="true" />
     <type fullname="TracingSentenceData" preserve="nothing" serialized="true" />
-    <type fullname="CategoryGroupInfo" preserve="nothing" serialized="true" />
     <type fullname="KKSpeech.SpeechRecognizerListener/AuthorizationCallback" preserve="nothing" serialized="true" />
     <type fullname="KKSpeech.SpeechRecognizerListener/AvailabilityCallback" preserve="nothing" serialized="true" />
     <type fullname="KKSpeech.SpeechRecognizerListener/ErrorCallback" preserve="nothing" serialized="true" />
@@ -634,6 +672,16 @@
     <type fullname="TutorialStep" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.gameinfra.Dialogue.DialogueEntryConfig" preserve="nothing" serialized="true" />
     <type fullname="MapUIPadding" preserve="nothing" serialized="true" />
+    <type fullname="Configs.DrawingSettings" preserve="nothing" serialized="true" />
+    <type fullname="Configs.EndGameSettings" preserve="nothing" serialized="true" />
+    <type fullname="Configs.LobbySettings" preserve="nothing" serialized="true" />
+    <type fullname="Configs.MessagesSettings" preserve="nothing" serialized="true" />
+    <type fullname="Configs.PointsSettings" preserve="nothing" serialized="true" />
+    <type fullname="Configs.PowerUpSettings" preserve="nothing" serialized="true" />
+    <type fullname="Configs.RoundEndSettings" preserve="nothing" serialized="true" />
+    <type fullname="Configs.ScoreSettings" preserve="nothing" serialized="true" />
+    <type fullname="Configs.SessionSettings" preserve="nothing" serialized="true" />
+    <type fullname="Configs.TimingSettings" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.gameinfra.controls.MultiValueToggleOption" preserve="nothing" serialized="true" />
     <type fullname="LetterAsset" preserve="nothing" serialized="true" />
     <type fullname="LettersDisplaySetting" preserve="nothing" serialized="true" />
@@ -674,6 +722,7 @@
     <type fullname="RacersSettings" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.Frogger.FroggerGameManager/GameModeInstruction" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.SearchGameManager/CustomSpritesSizes" preserve="nothing" serialized="true" />
+    <type fullname="EventAssetsRepo/Event" preserve="nothing" serialized="true" />
     <type fullname="CategoryColorsInfo" preserve="nothing" serialized="true" />
     <type fullname="ColorInfo" preserve="nothing" serialized="true" />
     <type fullname="Cloud" preserve="nothing" serialized="true" />
@@ -748,6 +797,18 @@
   </assembly>
   <assembly fullname="Febucci.TextAnimator.TMP.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="Febucci.UI.TextAnimator_TMP" preserve="all" />
+  </assembly>
+  <assembly fullname="Fusion.Runtime, Version=2.0.12.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="Fusion.NetworkObject" preserve="all" />
+    <type fullname="Fusion.NetworkObjectPrefabData" preserve="all" />
+    <type fullname="Fusion.NetworkRunner" preserve="all" />
+    <type fullname="Fusion.NetworkBool" preserve="nothing" serialized="true" />
+    <type fullname="Fusion.NetworkObjectGuid" preserve="nothing" serialized="true" />
+    <type fullname="Fusion.NetworkString`1[Fusion._256]" preserve="nothing" serialized="true" />
+    <type fullname="Fusion.NetworkString`1[Fusion._32]" preserve="nothing" serialized="true" />
+    <type fullname="Fusion.PlayerRef" preserve="nothing" serialized="true" />
+    <type fullname="Fusion._256" preserve="nothing" serialized="true" />
+    <type fullname="Fusion._32" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="Oculus.LipSync, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="OVRLipSyncContext" preserve="all" />
