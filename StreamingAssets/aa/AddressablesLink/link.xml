@@ -27,7 +27,6 @@
     <type fullname="AvatarBuilder" preserve="all" />
     <type fullname="AvatarBuilderEffectController" preserve="all" />
     <type fullname="AvatarDrag" preserve="all" />
-    <type fullname="AZKit.MobileKeyboardRaiser.KeyboardHeightDetector" preserve="all" />
     <type fullname="BackgroundMusic" preserve="all" />
     <type fullname="BalloonMovement" preserve="all" />
     <type fullname="Base.CameraFitter.CameraSmartFitter" preserve="all" />
@@ -379,7 +378,6 @@
     <type fullname="IndieStudio.EnglishTracingBook.Utility.SceneLoader" preserve="all" />
     <type fullname="IndieStudio.EnglishTracingBook.Utility.SingletonManager" preserve="all" />
     <type fullname="IndieStudio.EnglishTracingBook.Utility.TransformScale" preserve="all" />
-    <type fullname="InputFieldAutoScroller" preserve="all" />
     <type fullname="InputFieldController" preserve="all" />
     <type fullname="IslandsMapController" preserve="all" />
     <type fullname="ISpyActivityManagment" preserve="all" />
@@ -420,7 +418,6 @@
     <type fullname="KaelmixStudioGameAssets.TemplateWordGuess.ThemeElement" preserve="all" />
     <type fullname="KaelmixStudioGameAssets.TemplateWordGuess.ThemeManager" preserve="all" />
     <type fullname="KeyboardShiftButton" preserve="all" />
-    <type fullname="KeyboardUIHandler" preserve="all" />
     <type fullname="KKSpeech.SpeechRecognizerListener" preserve="all" />
     <type fullname="LastAttemptPopup" preserve="all" />
     <type fullname="LBActivityIcon" preserve="all" />
@@ -600,7 +597,10 @@
     <type fullname="UI.Extra.PlayerAvatarUI" preserve="all" />
     <type fullname="UI.Extra.PopUpController" preserve="all" />
     <type fullname="UI.GuessingUI" preserve="all" />
-    <type fullname="UI.KeyboardUI" preserve="all" />
+    <type fullname="UI.Keyboard.KbLayout" preserve="all" />
+    <type fullname="UI.Keyboard.KbStyle" preserve="all" />
+    <type fullname="UI.Keyboard.KeyboardKey" preserve="all" />
+    <type fullname="UI.Keyboard.KeyboardModule" preserve="all" />
     <type fullname="UI.LobbyDrawingUI" preserve="all" />
     <type fullname="UI.LobbyUI" preserve="all" />
     <type fullname="UI.MainMenuUI" preserve="all" />
@@ -608,6 +608,7 @@
     <type fullname="UI.RoundEndUI" preserve="all" />
     <type fullname="UI.ScoresEntryUI" preserve="all" />
     <type fullname="UI.ScoresUI" preserve="all" />
+    <type fullname="UI.WordGuessDisplay" preserve="all" />
     <type fullname="UI.WordSelectionUI" preserve="all" />
     <type fullname="UIGameObjFitter" preserve="all" />
     <type fullname="UIHandler" preserve="all" />
@@ -682,6 +683,10 @@
     <type fullname="Configs.ScoreSettings" preserve="nothing" serialized="true" />
     <type fullname="Configs.SessionSettings" preserve="nothing" serialized="true" />
     <type fullname="Configs.TimingSettings" preserve="nothing" serialized="true" />
+    <type fullname="UI.Keyboard.CustomKeyLabel" preserve="nothing" serialized="true" />
+    <type fullname="UI.Keyboard.KbCategoryStyle" preserve="nothing" serialized="true" />
+    <type fullname="UI.Keyboard.KbKeyOverride" preserve="nothing" serialized="true" />
+    <type fullname="UI.Keyboard.KbRowDef" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.gameinfra.controls.MultiValueToggleOption" preserve="nothing" serialized="true" />
     <type fullname="LetterAsset" preserve="nothing" serialized="true" />
     <type fullname="LettersDisplaySetting" preserve="nothing" serialized="true" />
@@ -992,10 +997,10 @@
     <type fullname="UnityEngine.Events.UnityEvent`1[PuzzlePiece]" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.UnityEvent`2[System.String,UnityEngine.Vector3]" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.UnityEvent`1[System.Int32]" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Events.UnityEvent`1[System.String]" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.UnityEvent`2[System.String,System.String]" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.U2D.SpriteBone" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.UnityEvent`1[UnityEngine.GameObject]" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.Events.UnityEvent`1[System.String]" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.UnityEvent`1[System.Boolean]" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
