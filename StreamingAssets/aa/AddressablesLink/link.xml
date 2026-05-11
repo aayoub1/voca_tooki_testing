@@ -27,7 +27,6 @@
     <type fullname="AvatarBuilder" preserve="all" />
     <type fullname="AvatarBuilderEffectController" preserve="all" />
     <type fullname="AvatarDrag" preserve="all" />
-    <type fullname="AZKit.MobileKeyboardRaiser.KeyboardHeightDetector" preserve="all" />
     <type fullname="BackgroundMusic" preserve="all" />
     <type fullname="BalloonMovement" preserve="all" />
     <type fullname="Base.CameraFitter.CameraSmartFitter" preserve="all" />
@@ -43,8 +42,11 @@
     <type fullname="CameraSizeFit" preserve="all" />
     <type fullname="CameraViewportHandler" preserve="all" />
     <type fullname="CanvasHandler" preserve="all" />
+    <type fullname="CardController" preserve="all" />
     <type fullname="CardHandler1" preserve="all" />
+    <type fullname="CardManager" preserve="all" />
     <type fullname="CardTask" preserve="all" />
+    <type fullname="CentralSceneController" preserve="all" />
     <type fullname="CFX_AutoDestructShuriken" preserve="all" />
     <type fullname="CFX_LightIntensityFade" preserve="all" />
     <type fullname="CharacterAnimationsHandler" preserve="all" />
@@ -273,6 +275,7 @@
     <type fullname="com.kideo.learn.english.WordMeaningTest" preserve="all" />
     <type fullname="com.kideo.learn.english.WordPanelViewRound" preserve="all" />
     <type fullname="com.kideo.learn.english.WordTreeActivityManagement" preserve="all" />
+    <type fullname="com.tech.kideo.multiplayer.head2head.RoomCodeController" preserve="all" />
     <type fullname="CompetitionResultsController" preserve="all" />
     <type fullname="Configs.BrushSettings" preserve="all" />
     <type fullname="Configs.GameSettings" preserve="all" />
@@ -282,6 +285,7 @@
     <type fullname="ControlsOverlay" preserve="all" />
     <type fullname="ControlsOverlayPositioner" preserve="all" />
     <type fullname="CountDownTimer" preserve="all" />
+    <type fullname="CreateRoomPanelController" preserve="all" />
     <type fullname="CreateWordsTemplate" preserve="all" />
     <type fullname="CrosswordMissedWords" preserve="all" />
     <type fullname="CrossWords.CrossWordsGenerator" preserve="all" />
@@ -334,6 +338,7 @@
     <type fullname="GameInfra.LeaderBoard.LeaderBoardEntryInfo" preserve="all" />
     <type fullname="GameInfra.LeaderBoard.LeaderBoardTab" preserve="all" />
     <type fullname="GameInfra.ParentControll" preserve="all" />
+    <type fullname="GameInProgressPanelController" preserve="all" />
     <type fullname="GameOverPanel" preserve="all" />
     <type fullname="GamePanel" preserve="all" />
     <type fullname="GenderSelectPopup" preserve="all" />
@@ -379,7 +384,6 @@
     <type fullname="IndieStudio.EnglishTracingBook.Utility.SceneLoader" preserve="all" />
     <type fullname="IndieStudio.EnglishTracingBook.Utility.SingletonManager" preserve="all" />
     <type fullname="IndieStudio.EnglishTracingBook.Utility.TransformScale" preserve="all" />
-    <type fullname="InputFieldAutoScroller" preserve="all" />
     <type fullname="InputFieldController" preserve="all" />
     <type fullname="IslandsMapController" preserve="all" />
     <type fullname="ISpyActivityManagment" preserve="all" />
@@ -388,6 +392,7 @@
     <type fullname="ItemCostTag" preserve="all" />
     <type fullname="ItemsCostManager" preserve="all" />
     <type fullname="ItemsCostsData" preserve="all" />
+    <type fullname="JoinRoomPanelController" preserve="all" />
     <type fullname="KaelmixStudioGameAssets.TemplateWordGuess.AudioManager" preserve="all" />
     <type fullname="KaelmixStudioGameAssets.TemplateWordGuess.ColorPicker" preserve="all" />
     <type fullname="KaelmixStudioGameAssets.TemplateWordGuess.ColorPickerGradient" preserve="all" />
@@ -420,7 +425,6 @@
     <type fullname="KaelmixStudioGameAssets.TemplateWordGuess.ThemeElement" preserve="all" />
     <type fullname="KaelmixStudioGameAssets.TemplateWordGuess.ThemeManager" preserve="all" />
     <type fullname="KeyboardShiftButton" preserve="all" />
-    <type fullname="KeyboardUIHandler" preserve="all" />
     <type fullname="KKSpeech.SpeechRecognizerListener" preserve="all" />
     <type fullname="LastAttemptPopup" preserve="all" />
     <type fullname="LBActivityIcon" preserve="all" />
@@ -460,6 +464,7 @@
     <type fullname="Network.MessagesNetworkHandler" preserve="all" />
     <type fullname="Network.NetworkConnector" preserve="all" />
     <type fullname="Network.NetworkPlayerManager" preserve="all" />
+    <type fullname="Network.StickerNetworkHandler" preserve="all" />
     <type fullname="NewClickableKeyboard" preserve="all" />
     <type fullname="NewMemoryAreaHandler" preserve="all" />
     <type fullname="NotificationIndicator" preserve="all" />
@@ -514,6 +519,7 @@
     <type fullname="ScreenEdgeColliders" preserve="all" />
     <type fullname="ScreenFadeEffect" preserve="all" />
     <type fullname="ScrollView" preserve="all" />
+    <type fullname="SearchingOpponentPanelController" preserve="all" />
     <type fullname="SentenceCompletionQuiz" preserve="all" />
     <type fullname="SentenceCompletionStartActivity" preserve="all" />
     <type fullname="SentenceTranslationOpenningScene" preserve="all" />
@@ -525,6 +531,7 @@
     <type fullname="SettingsButton" preserve="all" />
     <type fullname="SettingsPopupController" preserve="all" />
     <type fullname="ShakeScript" preserve="all" />
+    <type fullname="SharedObjectsController" preserve="all" />
     <type fullname="SharkFollowPlayer" preserve="all" />
     <type fullname="SharksGamePlay" preserve="all" />
     <type fullname="SharksManagement" preserve="all" />
@@ -546,10 +553,13 @@
     <type fullname="Spider" preserve="all" />
     <type fullname="SpidersController" preserve="all" />
     <type fullname="SpinEffect" preserve="all" />
+    <type fullname="SpriteBlackToggle" preserve="all" />
     <type fullname="SpriteParticleEmitter.UIParticleRenderer" preserve="all" />
     <type fullname="SpriteStretch" preserve="all" />
+    <type fullname="StartPanelController" preserve="all" />
     <type fullname="StartSceneButtonsHandler" preserve="all" />
     <type fullname="StartSceneController" preserve="all" />
+    <type fullname="StartSoonPanelController" preserve="all" />
     <type fullname="StoneHandler" preserve="all" />
     <type fullname="SubTaskFeedback" preserve="all" />
     <type fullname="SubtaskLayoutConfig" preserve="all" />
@@ -596,18 +606,25 @@
     <type fullname="UI.DrawingUI" preserve="all" />
     <type fullname="UI.EndGameUI" preserve="all" />
     <type fullname="UI.Extra.HandleInformativePopup" preserve="all" />
+    <type fullname="UI.Extra.LeaveConfirmationPopup" preserve="all" />
     <type fullname="UI.Extra.LoadingCircleController" preserve="all" />
     <type fullname="UI.Extra.PlayerAvatarUI" preserve="all" />
     <type fullname="UI.Extra.PopUpController" preserve="all" />
+    <type fullname="UI.Extra.StickerDisplayManager" preserve="all" />
+    <type fullname="UI.Extra.StickerUI" preserve="all" />
     <type fullname="UI.GuessingUI" preserve="all" />
-    <type fullname="UI.KeyboardUI" preserve="all" />
-    <type fullname="UI.LobbyDrawingUI" preserve="all" />
+    <type fullname="UI.JoinRoomPanel" preserve="all" />
+    <type fullname="UI.Keyboard.KbLayout" preserve="all" />
+    <type fullname="UI.Keyboard.KbStyle" preserve="all" />
+    <type fullname="UI.Keyboard.KeyboardKey" preserve="all" />
+    <type fullname="UI.Keyboard.KeyboardModule" preserve="all" />
     <type fullname="UI.LobbyUI" preserve="all" />
     <type fullname="UI.MainMenuUI" preserve="all" />
     <type fullname="UI.MessagesUI" preserve="all" />
     <type fullname="UI.RoundEndUI" preserve="all" />
     <type fullname="UI.ScoresEntryUI" preserve="all" />
     <type fullname="UI.ScoresUI" preserve="all" />
+    <type fullname="UI.WordGuessDisplay" preserve="all" />
     <type fullname="UI.WordSelectionUI" preserve="all" />
     <type fullname="UIGameObjFitter" preserve="all" />
     <type fullname="UIHandler" preserve="all" />
@@ -617,7 +634,6 @@
     <type fullname="UnitTest" preserve="all" />
     <type fullname="UnityEngine.UI.Extensions.RadialLayout" preserve="all" />
     <type fullname="UnityEngine.UI.LetterSpacing" preserve="all" />
-    <type fullname="UnityWebGLSpeechDetection.ProxySpeechDetectionPlugin" preserve="all" />
     <type fullname="UnityWebGLSpeechDetection.WebGLSpeechDetectionPlugin" preserve="all" />
     <type fullname="UnscrambleOpenningScene" preserve="all" />
     <type fullname="UnscrambleQuiz" preserve="all" />
@@ -634,6 +650,7 @@
     <type fullname="VTActivitySlot" preserve="all" />
     <type fullname="VTWordConnectGenerator" preserve="all" />
     <type fullname="WavesMovement" preserve="all" />
+    <type fullname="WinnerPanelController" preserve="all" />
     <type fullname="WordConnect.WordsConnect" preserve="all" />
     <type fullname="WordImage" preserve="all" />
     <type fullname="WordInfoBubble" preserve="all" />
@@ -663,25 +680,16 @@
     <type fullname="LetterDisplayColors" preserve="nothing" serialized="true" />
     <type fullname="ShapeOptions" preserve="nothing" serialized="true" />
     <type fullname="TracingSentenceData" preserve="nothing" serialized="true" />
+    <type fullname="CardManager/CardData" preserve="nothing" serialized="true" />
+    <type fullname="SceneNavigator/SceneId" preserve="nothing" serialized="true" />
     <type fullname="KKSpeech.SpeechRecognizerListener/AuthorizationCallback" preserve="nothing" serialized="true" />
     <type fullname="KKSpeech.SpeechRecognizerListener/AvailabilityCallback" preserve="nothing" serialized="true" />
     <type fullname="KKSpeech.SpeechRecognizerListener/ErrorCallback" preserve="nothing" serialized="true" />
     <type fullname="KKSpeech.SpeechRecognizerListener/ResultCallback" preserve="nothing" serialized="true" />
     <type fullname="KKSpeech.SpeechRecognizerListener/SupportedLanguagesCallback" preserve="nothing" serialized="true" />
-    <type fullname="SceneNavigator/SceneId" preserve="nothing" serialized="true" />
     <type fullname="TutorialStep" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.gameinfra.Dialogue.DialogueEntryConfig" preserve="nothing" serialized="true" />
     <type fullname="MapUIPadding" preserve="nothing" serialized="true" />
-    <type fullname="Configs.DrawingSettings" preserve="nothing" serialized="true" />
-    <type fullname="Configs.EndGameSettings" preserve="nothing" serialized="true" />
-    <type fullname="Configs.LobbySettings" preserve="nothing" serialized="true" />
-    <type fullname="Configs.MessagesSettings" preserve="nothing" serialized="true" />
-    <type fullname="Configs.PointsSettings" preserve="nothing" serialized="true" />
-    <type fullname="Configs.PowerUpSettings" preserve="nothing" serialized="true" />
-    <type fullname="Configs.RoundEndSettings" preserve="nothing" serialized="true" />
-    <type fullname="Configs.ScoreSettings" preserve="nothing" serialized="true" />
-    <type fullname="Configs.SessionSettings" preserve="nothing" serialized="true" />
-    <type fullname="Configs.TimingSettings" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.gameinfra.controls.MultiValueToggleOption" preserve="nothing" serialized="true" />
     <type fullname="LetterAsset" preserve="nothing" serialized="true" />
     <type fullname="LettersDisplaySetting" preserve="nothing" serialized="true" />
@@ -716,6 +724,25 @@
     <type fullname="LocalizedSpriteInfo" preserve="nothing" serialized="true" />
     <type fullname="SpriteInfo" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.audiobook.AudiobookData" preserve="nothing" serialized="true" />
+    <type fullname="Configs.DrawingSettings" preserve="nothing" serialized="true" />
+    <type fullname="Configs.EndGameSettings" preserve="nothing" serialized="true" />
+    <type fullname="Configs.LobbySettings" preserve="nothing" serialized="true" />
+    <type fullname="Configs.MessagesSettings" preserve="nothing" serialized="true" />
+    <type fullname="Configs.PointsSettings" preserve="nothing" serialized="true" />
+    <type fullname="Configs.PowerUpSettings" preserve="nothing" serialized="true" />
+    <type fullname="Configs.ReportingSettings" preserve="nothing" serialized="true" />
+    <type fullname="Configs.RoundEndSettings" preserve="nothing" serialized="true" />
+    <type fullname="Configs.ScoreSettings" preserve="nothing" serialized="true" />
+    <type fullname="Configs.SessionSettings" preserve="nothing" serialized="true" />
+    <type fullname="Configs.StickerSettings" preserve="nothing" serialized="true" />
+    <type fullname="Configs.TestingSettings" preserve="nothing" serialized="true" />
+    <type fullname="Configs.TimingSettings" preserve="nothing" serialized="true" />
+    <type fullname="Configs.WordValidationSettings" preserve="nothing" serialized="true" />
+    <type fullname="UI.Keyboard.CustomKeyLabel" preserve="nothing" serialized="true" />
+    <type fullname="UI.Keyboard.CustomKeyPrefabMapping" preserve="nothing" serialized="true" />
+    <type fullname="UI.Keyboard.KbCategoryStyle" preserve="nothing" serialized="true" />
+    <type fullname="UI.Keyboard.KbKeyOverride" preserve="nothing" serialized="true" />
+    <type fullname="UI.Keyboard.KbRowDef" preserve="nothing" serialized="true" />
     <type fullname="ThirdActivityInfo" preserve="nothing" serialized="true" />
     <type fullname="SoundRepositroy/NamedSound" preserve="nothing" serialized="true" />
     <type fullname="RacersConfigrations" preserve="nothing" serialized="true" />
@@ -863,6 +890,7 @@
     <type fullname="UnityEngine.AddressableAssets.AssetReferenceGameObject" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="Unity.Localization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.Localization.Components.LocalizeSpriteEvent" preserve="all" />
     <type fullname="UnityEngine.Localization.Components.LocalizeStringEvent" preserve="all" />
     <type fullname="UnityEngine.Localization.Locale" preserve="all" />
     <type fullname="UnityEngine.Localization.Tables.AssetTable" preserve="all" />
@@ -880,6 +908,8 @@
     <type fullname="UnityEngine.Localization.Metadata.AssetTypeMetadata" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Localization.Tables.DistributedUIDGenerator" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Localization.Tables.SharedTableData/SharedTableEntry" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Localization.Events.UnityEventSprite" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Localization.LocalizedSprite" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="Unity.ProBuilder, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="UnityEngine.ProBuilder.ProBuilderMesh" preserve="all" />
@@ -903,11 +933,11 @@
     <type fullname="UnityEngine.Rendering.Universal.Tonemapping" preserve="all" />
     <type fullname="UnityEngine.Rendering.Universal.UniversalAdditionalCameraData" preserve="all" />
     <type fullname="UnityEngine.Rendering.Universal.UniversalAdditionalLightData" preserve="all" />
+    <type fullname="UnityEngine.Rendering.Universal.TemporalAA/Settings" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Rendering.Universal.DownscaleParameter" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Rendering.Universal.HDRACESPresetParameter" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Rendering.Universal.NeutralRangeReductionModeParameter" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Rendering.Universal.TonemappingModeParameter" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.Rendering.Universal.TemporalAA/Settings" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" preserve="all">
     <type fullname="UnityEngine.ResourceManagement.ResourceProviders.AssetBundleProvider" preserve="all" />
