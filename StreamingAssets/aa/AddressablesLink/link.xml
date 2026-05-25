@@ -20,6 +20,9 @@
     <type fullname="AnimationEventsCallBack" preserve="all" />
     <type fullname="animationTargetScript" preserve="all" />
     <type fullname="AppVersion" preserve="all" />
+    <type fullname="ArenaChatController" preserve="all" />
+    <type fullname="ArenaSpeechBubble" preserve="all" />
+    <type fullname="ArenaStickerCatalog" preserve="all" />
     <type fullname="Assets.Activities.CrossWords.Scripts.ActivityManager" preserve="all" />
     <type fullname="Audiobook" preserve="all" />
     <type fullname="AudiobookPage" preserve="all" />
@@ -115,7 +118,6 @@
     <type fullname="com.kideo.learn.english.CrosswordActivityManager" preserve="all" />
     <type fullname="com.kideo.learn.english.CrossWordIntroManager" preserve="all" />
     <type fullname="com.kideo.learn.english.CrosswordLetterHandler" preserve="all" />
-    <type fullname="com.kideo.learn.english.CrossWordToFind" preserve="all" />
     <type fullname="com.kideo.learn.english.CrossWordToFindManager" preserve="all" />
     <type fullname="com.kideo.learn.english.CrosswordTouchPanelHandler" preserve="all" />
     <type fullname="com.kideo.learn.english.CupTournament.GroupMemberListEntry" preserve="all" />
@@ -349,6 +351,7 @@
     <type fullname="HangWordsActivityManagement" preserve="all" />
     <type fullname="HangWordsGameManager" preserve="all" />
     <type fullname="HardWorkerPanel" preserve="all" />
+    <type fullname="Head2HeadActivityLoader" preserve="all" />
     <type fullname="HeartTimer" preserve="all" />
     <type fullname="HelpPopUpHandler" preserve="all" />
     <type fullname="HorizontalLayoutLangHandler" preserve="all" />
@@ -443,6 +446,7 @@
     <type fullname="LoadingPanel" preserve="all" />
     <type fullname="LocalizedText" preserve="all" />
     <type fullname="MainMenuLeaderboardFetcher" preserve="all" />
+    <type fullname="MainThreadDispatcher" preserve="all" />
     <type fullname="Managers.GameUIController" preserve="all" />
     <type fullname="Managers.LobbyManager" preserve="all" />
     <type fullname="Managers.MainManager" preserve="all" />
@@ -459,6 +463,7 @@
     <type fullname="MultipleChoicesTask" preserve="all" />
     <type fullname="MultipleChoiceSubtask" preserve="all" />
     <type fullname="NativeLanguageModeHandler" preserve="all" />
+    <type fullname="Network.ConnectionWatcher" preserve="all" />
     <type fullname="Network.GameMainManager" preserve="all" />
     <type fullname="Network.GameNetworkHandler" preserve="all" />
     <type fullname="Network.GameStateManager" preserve="all" />
@@ -481,6 +486,7 @@
     <type fullname="PipeJunctionObject" preserve="all" />
     <type fullname="Player.NewPlayerData" preserve="all" />
     <type fullname="Player.NewPlayerSpawner" preserve="all" />
+    <type fullname="PlayerCardController" preserve="all" />
     <type fullname="PlayerController" preserve="all" />
     <type fullname="PlayerInfoPanel" preserve="all" />
     <type fullname="PlayerMovement" preserve="all" />
@@ -544,6 +550,7 @@
     <type fullname="ShopSpritesInfo" preserve="all" />
     <type fullname="ShuffledContextQuestion" preserve="all" />
     <type fullname="ShuffledContextTest" preserve="all" />
+    <type fullname="Smiles.ParentFitter" preserve="all" />
     <type fullname="SnakeController" preserve="all" />
     <type fullname="SnakeSoundManager" preserve="all" />
     <type fullname="SortingMonkeyController" preserve="all" />
@@ -581,6 +588,7 @@
     <type fullname="TileData" preserve="all" />
     <type fullname="TimeBasedController" preserve="all" />
     <type fullname="Timer" preserve="all" />
+    <type fullname="TimerHandler" preserve="all" />
     <type fullname="TMProWordPanel" preserve="all" />
     <type fullname="ToggleButtonGroup" preserve="all" />
     <type fullname="ToggleGameObject" preserve="all" />
@@ -662,6 +670,7 @@
     <type fullname="WordListButton" preserve="all" />
     <type fullname="WordListEntry" preserve="all" />
     <type fullname="WordListPanel" preserve="all" />
+    <type fullname="WordlistSceneController" preserve="all" />
     <type fullname="WordPanel" preserve="all" />
     <type fullname="WordsMatchingOpenningScene" preserve="all" />
     <type fullname="WordsMatchingQuiz" preserve="all" />
@@ -747,6 +756,7 @@
     <type fullname="UI.Keyboard.KbKeyOverride" preserve="nothing" serialized="true" />
     <type fullname="UI.Keyboard.KbRowDef" preserve="nothing" serialized="true" />
     <type fullname="ThirdActivityInfo" preserve="nothing" serialized="true" />
+    <type fullname="ArenaStickerCatalog/StickerEntry" preserve="nothing" serialized="true" />
     <type fullname="SoundRepositroy/NamedSound" preserve="nothing" serialized="true" />
     <type fullname="RacersConfigrations" preserve="nothing" serialized="true" />
     <type fullname="RacersSettings" preserve="nothing" serialized="true" />
