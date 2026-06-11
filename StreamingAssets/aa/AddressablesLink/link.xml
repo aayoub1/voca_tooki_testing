@@ -20,6 +20,7 @@
     <type fullname="AnimationEventsCallBack" preserve="all" />
     <type fullname="animationTargetScript" preserve="all" />
     <type fullname="AppVersion" preserve="all" />
+    <type fullname="ArenaChatAvoider" preserve="all" />
     <type fullname="ArenaChatController" preserve="all" />
     <type fullname="ArenaSpeechBubble" preserve="all" />
     <type fullname="ArenaStickerCatalog" preserve="all" />
@@ -118,6 +119,7 @@
     <type fullname="com.kideo.learn.english.CrosswordActivityManager" preserve="all" />
     <type fullname="com.kideo.learn.english.CrossWordIntroManager" preserve="all" />
     <type fullname="com.kideo.learn.english.CrosswordLetterHandler" preserve="all" />
+    <type fullname="com.kideo.learn.english.CrossWordToFind" preserve="all" />
     <type fullname="com.kideo.learn.english.CrossWordToFindManager" preserve="all" />
     <type fullname="com.kideo.learn.english.CrosswordTouchPanelHandler" preserve="all" />
     <type fullname="com.kideo.learn.english.CupTournament.GroupMemberListEntry" preserve="all" />
