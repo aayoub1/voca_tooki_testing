@@ -38,6 +38,7 @@
     <type fullname="Bird" preserve="all" />
     <type fullname="BlankFieldHelper" preserve="all" />
     <type fullname="Board" preserve="all" />
+    <type fullname="Bots.BotMatchController" preserve="all" />
     <type fullname="Boundry" preserve="all" />
     <type fullname="BubbleHandler" preserve="all" />
     <type fullname="BubbleMotion" preserve="all" />
@@ -132,6 +133,11 @@
     <type fullname="com.kideo.learn.english.DocumentSubTaskCell" preserve="all" />
     <type fullname="com.kideo.learn.english.DraggableLineRenderer" preserve="all" />
     <type fullname="com.kideo.learn.english.DragHandler" preserve="all" />
+    <type fullname="com.kideo.learn.english.EggController" preserve="all" />
+    <type fullname="com.kideo.learn.english.EggsActivityManager" preserve="all" />
+    <type fullname="com.kideo.learn.english.EggsBasketController" preserve="all" />
+    <type fullname="com.kideo.learn.english.EggsGameManager" preserve="all" />
+    <type fullname="com.kideo.learn.english.EggsWordPanel" preserve="all" />
     <type fullname="com.kideo.learn.english.EnglishFishermanActivityScene" preserve="all" />
     <type fullname="com.kideo.learn.english.EnglishTurtleIslandActivityScene" preserve="all" />
     <type fullname="com.kideo.learn.english.Events.EventCard" preserve="all" />
@@ -281,6 +287,7 @@
     <type fullname="com.kideo.learn.english.WordTreeActivityManagement" preserve="all" />
     <type fullname="com.tech.kideo.multiplayer.head2head.RoomCodeController" preserve="all" />
     <type fullname="CompetitionResultsController" preserve="all" />
+    <type fullname="Configs.BotMatchSettings" preserve="all" />
     <type fullname="Configs.BrushSettings" preserve="all" />
     <type fullname="Configs.GameSettings" preserve="all" />
     <type fullname="ConfirmationPopup" preserve="all" />
@@ -614,6 +621,7 @@
     <type fullname="TurtleIslandWorldHandler" preserve="all" />
     <type fullname="TutorialLayer" preserve="all" />
     <type fullname="TwoColumnsUIFitter" preserve="all" />
+    <type fullname="UI.CorrectGuessBanner" preserve="all" />
     <type fullname="UI.DrawingUI" preserve="all" />
     <type fullname="UI.EndGameUI" preserve="all" />
     <type fullname="UI.Extra.HandleInformativePopup" preserve="all" />
@@ -633,6 +641,7 @@
     <type fullname="UI.LobbyUI" preserve="all" />
     <type fullname="UI.MainMenuUI" preserve="all" />
     <type fullname="UI.MessagesUI" preserve="all" />
+    <type fullname="UI.PlacementRewardUI" preserve="all" />
     <type fullname="UI.RoundEndUI" preserve="all" />
     <type fullname="UI.ScoresEntryUI" preserve="all" />
     <type fullname="UI.ScoresUI" preserve="all" />
@@ -741,6 +750,7 @@
     <type fullname="com.kideo.learn.english.TreasureIsland.CategoryData" preserve="nothing" serialized="true" />
     <type fullname="AnimalDescriptionByLocal" preserve="nothing" serialized="true" />
     <type fullname="AnimalInfo" preserve="nothing" serialized="true" />
+    <type fullname="com.kideo.learn.english.EggsGameManager/DifficultySettings" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.Pipes.PipePathStructure" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.Feedback.ResultDef" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.SubTaskAnswer" preserve="nothing" serialized="true" />
@@ -752,6 +762,9 @@
     <type fullname="LocalizedSpriteInfo" preserve="nothing" serialized="true" />
     <type fullname="SpriteInfo" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.audiobook.AudiobookData" preserve="nothing" serialized="true" />
+    <type fullname="Configs.BotMatchSettings/BotJoinSlot" preserve="nothing" serialized="true" />
+    <type fullname="Configs.BotMatchSettings/DrawerSkill" preserve="nothing" serialized="true" />
+    <type fullname="Configs.BotMatchSettings/GuesserSkill" preserve="nothing" serialized="true" />
     <type fullname="UI.Keyboard.CustomKeyLabel" preserve="nothing" serialized="true" />
     <type fullname="UI.Keyboard.CustomKeyPrefabMapping" preserve="nothing" serialized="true" />
     <type fullname="UI.Keyboard.KbCategoryStyle" preserve="nothing" serialized="true" />
