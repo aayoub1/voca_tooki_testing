@@ -110,6 +110,7 @@
     <type fullname="com.kideo.learn.english.Brickout.BrickOutGameUI" preserve="all" />
     <type fullname="com.kideo.learn.english.Brickout.BrickOutPaddle" preserve="all" />
     <type fullname="com.kideo.learn.english.Brickout.BrickWord" preserve="all" />
+    <type fullname="com.kideo.learn.english.BridgeCard" preserve="all" />
     <type fullname="com.kideo.learn.english.BubblesActivityManagerScript" preserve="all" />
     <type fullname="com.kideo.learn.english.BubblesGameManager" preserve="all" />
     <type fullname="com.kideo.learn.english.ContextAudioTypingQuiz" preserve="all" />
@@ -133,6 +134,11 @@
     <type fullname="com.kideo.learn.english.DocumentSubTaskCell" preserve="all" />
     <type fullname="com.kideo.learn.english.DraggableLineRenderer" preserve="all" />
     <type fullname="com.kideo.learn.english.DragHandler" preserve="all" />
+    <type fullname="com.kideo.learn.english.EggController" preserve="all" />
+    <type fullname="com.kideo.learn.english.EggsActivityManager" preserve="all" />
+    <type fullname="com.kideo.learn.english.EggsBasketController" preserve="all" />
+    <type fullname="com.kideo.learn.english.EggsLetterBox" preserve="all" />
+    <type fullname="com.kideo.learn.english.EggsWordPanel" preserve="all" />
     <type fullname="com.kideo.learn.english.EnglishFishermanActivityScene" preserve="all" />
     <type fullname="com.kideo.learn.english.EnglishTurtleIslandActivityScene" preserve="all" />
     <type fullname="com.kideo.learn.english.Events.EventCard" preserve="all" />
@@ -146,6 +152,7 @@
     <type fullname="com.kideo.learn.english.FillMissingTest" preserve="all" />
     <type fullname="com.kideo.learn.english.FillMissingWord" preserve="all" />
     <type fullname="com.kideo.learn.english.FishermanBaseManager" preserve="all" />
+    <type fullname="com.kideo.learn.english.FoxTapReplay" preserve="all" />
     <type fullname="com.kideo.learn.english.Frogger.Frogger" preserve="all" />
     <type fullname="com.kideo.learn.english.Frogger.FroggerActivityManagement" preserve="all" />
     <type fullname="com.kideo.learn.english.Frogger.FroggerAnimationHandler" preserve="all" />
@@ -157,6 +164,7 @@
     <type fullname="com.kideo.learn.english.GeneralAnimationMapping" preserve="all" />
     <type fullname="com.kideo.learn.english.GridLayoutController" preserve="all" />
     <type fullname="com.kideo.learn.english.GuestTestsByGrade" preserve="all" />
+    <type fullname="com.kideo.learn.english.HangingBridgeManager" preserve="all" />
     <type fullname="com.kideo.learn.english.ImageSubTaskCell" preserve="all" />
     <type fullname="com.kideo.learn.english.LaserController" preserve="all" />
     <type fullname="com.kideo.learn.english.LeaderBoard.LessonLBButton" preserve="all" />
@@ -245,6 +253,7 @@
     <type fullname="com.kideo.learn.english.SortingActivityManagment" preserve="all" />
     <type fullname="com.kideo.learn.english.SortingRound" preserve="all" />
     <type fullname="com.kideo.learn.english.SpeechRecognitionStatus" preserve="all" />
+    <type fullname="com.kideo.learn.english.SpiderWebRescueManager" preserve="all" />
     <type fullname="com.kideo.learn.english.SubTaskFeedback" preserve="all" />
     <type fullname="com.kideo.learn.english.SwapTestLetter" preserve="all" />
     <type fullname="com.kideo.learn.english.SwapTestWord" preserve="all" />
@@ -270,11 +279,18 @@
     <type fullname="com.kideo.learn.english.UserView.UserViewHandler" preserve="all" />
     <type fullname="com.kideo.learn.english.VendingMachineController" preserve="all" />
     <type fullname="com.kideo.learn.english.VideoSubTaskCell" preserve="all" />
+    <type fullname="com.kideo.learn.english.VocaTapReplay" preserve="all" />
     <type fullname="com.kideo.learn.english.VoiceControl" preserve="all" />
     <type fullname="com.kideo.learn.english.VoiceSubTaskCell" preserve="all" />
+    <type fullname="com.kideo.learn.english.WebCard" preserve="all" />
     <type fullname="com.kideo.learn.english.WordAudioObject" preserve="all" />
     <type fullname="com.kideo.learn.english.WordAudioShape" preserve="all" />
     <type fullname="com.kideo.learn.english.WordAudioTest" preserve="all" />
+    <type fullname="com.kideo.learn.english.WordFactoryCard" preserve="all" />
+    <type fullname="com.kideo.learn.english.WordFactoryConveyorController" preserve="all" />
+    <type fullname="com.kideo.learn.english.WordFactoryCrateController" preserve="all" />
+    <type fullname="com.kideo.learn.english.WordFactoryManager" preserve="all" />
+    <type fullname="com.kideo.learn.english.WordFactorySlot" preserve="all" />
     <type fullname="com.kideo.learn.english.WordMeaningObject" preserve="all" />
     <type fullname="com.kideo.learn.english.WordMeaningShape" preserve="all" />
     <type fullname="com.kideo.learn.english.WordMeaningTest" preserve="all" />
@@ -692,6 +708,9 @@
     <type fullname="com.kideo.gameinfra.Dialogue.CharacterAssets" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.gameinfra.Dialogue.Prompts" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.gameinfra.Dialogue.TextPricing" preserve="nothing" serialized="true" />
+    <type fullname="com.kideo.learn.english.NewMap.LevelIconEntry" preserve="nothing" serialized="true" />
+    <type fullname="com.kideo.learn.english.NewMap.MapPath" preserve="nothing" serialized="true" />
+    <type fullname="com.kideo.learn.english.NewMap.PathArea" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.Hint" preserve="nothing" serialized="true" />
     <type fullname="ActivityInfo" preserve="nothing" serialized="true" />
     <type fullname="IndieStudio.EnglishTracingBook.Game.ShapesManager/Shape" preserve="nothing" serialized="true" />
@@ -733,9 +752,6 @@
     <type fullname="Word" preserve="nothing" serialized="true" />
     <type fullname="Wordsmetadatum" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.Round/InstructionData" preserve="nothing" serialized="true" />
-    <type fullname="com.kideo.learn.english.NewMap.LevelIconEntry" preserve="nothing" serialized="true" />
-    <type fullname="com.kideo.learn.english.NewMap.MapPath" preserve="nothing" serialized="true" />
-    <type fullname="com.kideo.learn.english.NewMap.PathArea" preserve="nothing" serialized="true" />
     <type fullname="ExamLocalStringByName" preserve="nothing" serialized="true" />
     <type fullname="ExamScoreData" preserve="nothing" serialized="true" />
     <type fullname="YouWinTextByScore" preserve="nothing" serialized="true" />
@@ -745,16 +761,17 @@
     <type fullname="com.kideo.learn.english.TreasureIsland.CategoryData" preserve="nothing" serialized="true" />
     <type fullname="AnimalDescriptionByLocal" preserve="nothing" serialized="true" />
     <type fullname="AnimalInfo" preserve="nothing" serialized="true" />
+    <type fullname="com.kideo.learn.english.EggsActivityManager/DifficultySettings" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.Pipes.PipePathStructure" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.Feedback.ResultDef" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.SubTaskAnswer" preserve="nothing" serialized="true" />
     <type fullname="NamedSound" preserve="nothing" serialized="true" />
     <type fullname="AwardTypeInfo" preserve="nothing" serialized="true" />
     <type fullname="DailyGameTitle" preserve="nothing" serialized="true" />
+    <type fullname="SpriteInfo" preserve="nothing" serialized="true" />
     <type fullname="ActivitiesByGrade" preserve="nothing" serialized="true" />
     <type fullname="ItemCostInfo" preserve="nothing" serialized="true" />
     <type fullname="LocalizedSpriteInfo" preserve="nothing" serialized="true" />
-    <type fullname="SpriteInfo" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.audiobook.AudiobookData" preserve="nothing" serialized="true" />
     <type fullname="Configs.BotMatchSettings/BotJoinSlot" preserve="nothing" serialized="true" />
     <type fullname="Configs.BotMatchSettings/DrawerSkill" preserve="nothing" serialized="true" />
@@ -765,6 +782,12 @@
     <type fullname="UI.Keyboard.KbKeyOverride" preserve="nothing" serialized="true" />
     <type fullname="UI.Keyboard.KbRowDef" preserve="nothing" serialized="true" />
     <type fullname="ThirdActivityInfo" preserve="nothing" serialized="true" />
+    <type fullname="com.kideo.learn.english.RequireEnoughWordsOfLengthRule" preserve="nothing" serialized="true" />
+    <type fullname="com.kideo.learn.english.RequireEnoughWordsRule" preserve="nothing" serialized="true" />
+    <type fullname="com.kideo.learn.english.RequireEveryWordMinLengthRule" preserve="nothing" serialized="true" />
+    <type fullname="com.kideo.learn.english.RequireGlobalSettingRule" preserve="nothing" serialized="true" />
+    <type fullname="com.kideo.learn.english.RequireLevelTypeRule" preserve="nothing" serialized="true" />
+    <type fullname="com.kideo.learn.english.RequireUnderstandableWordsRule" preserve="nothing" serialized="true" />
     <type fullname="ArenaStickerCatalog/StickerEntry" preserve="nothing" serialized="true" />
     <type fullname="SoundRepositroy/NamedSound" preserve="nothing" serialized="true" />
     <type fullname="RacersConfigrations" preserve="nothing" serialized="true" />
