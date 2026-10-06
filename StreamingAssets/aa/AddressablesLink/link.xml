@@ -98,7 +98,6 @@
     <type fullname="com.kideo.learn.english.AnimationEventController" preserve="all" />
     <type fullname="com.kideo.learn.english.AnimationMapping" preserve="all" />
     <type fullname="com.kideo.learn.english.AreYouSurePanel" preserve="all" />
-    <type fullname="com.kideo.learn.english.Avatar3D.Avatar3DAudienceItems" preserve="all" />
     <type fullname="com.kideo.learn.english.Avatar3D.Avatar3DBackgroundAnchor" preserve="all" />
     <type fullname="com.kideo.learn.english.Avatar3D.Avatar3DBuilder" preserve="all" />
     <type fullname="com.kideo.learn.english.Avatar3D.Avatar3DBuyBar" preserve="all" />
@@ -308,6 +307,24 @@
     <type fullname="com.kideo.learn.english.UserView.UserViewHandler" preserve="all" />
     <type fullname="com.kideo.learn.english.VendingMachineController" preserve="all" />
     <type fullname="com.kideo.learn.english.VideoSubTaskCell" preserve="all" />
+    <type fullname="com.kideo.learn.english.VocaCity.BuilderInventoryUI" preserve="all" />
+    <type fullname="com.kideo.learn.english.VocaCity.BuilderModeController" preserve="all" />
+    <type fullname="com.kideo.learn.english.VocaCity.BuildingDefinition" preserve="all" />
+    <type fullname="com.kideo.learn.english.VocaCity.CityStateService" preserve="all" />
+    <type fullname="com.kideo.learn.english.VocaCity.DecorationCatalog" preserve="all" />
+    <type fullname="com.kideo.learn.english.VocaCity.DecorationDefinition" preserve="all" />
+    <type fullname="com.kideo.learn.english.VocaCity.DecorationItemCell" preserve="all" />
+    <type fullname="com.kideo.learn.english.VocaCity.DecorationRenderer" preserve="all" />
+    <type fullname="com.kideo.learn.english.VocaCity.DecorationSelectionController" preserve="all" />
+    <type fullname="com.kideo.learn.english.VocaCity.IslandDefinition" preserve="all" />
+    <type fullname="com.kideo.learn.english.VocaCity.IslandRenderer" preserve="all" />
+    <type fullname="com.kideo.learn.english.VocaCity.PlacementDragController" preserve="all" />
+    <type fullname="com.kideo.learn.english.VocaCity.PointerDownRelay" preserve="all" />
+    <type fullname="com.kideo.learn.english.VocaCity.VocaCityCameraZoom" preserve="all" />
+    <type fullname="com.kideo.learn.english.VocaCity.VocaCityController" preserve="all" />
+    <type fullname="com.kideo.learn.english.VocaCity.VocaCityToast" preserve="all" />
+    <type fullname="com.kideo.learn.english.VocaCity.VocaCityWorlds" preserve="all" />
+    <type fullname="com.kideo.learn.english.VocaCity.WorldThemePack" preserve="all" />
     <type fullname="com.kideo.learn.english.VocaTapReplay" preserve="all" />
     <type fullname="com.kideo.learn.english.VoiceControl" preserve="all" />
     <type fullname="com.kideo.learn.english.VoiceSubTaskCell" preserve="all" />
@@ -403,7 +420,6 @@
     <type fullname="Head2HeadActivityLoader" preserve="all" />
     <type fullname="HeartTimer" preserve="all" />
     <type fullname="HelpPopUpHandler" preserve="all" />
-    <type fullname="HoldToDrag" preserve="all" />
     <type fullname="HorizontalLayoutLangHandler" preserve="all" />
     <type fullname="ImageSubtask" preserve="all" />
     <type fullname="ImageWithAudioChoices" preserve="all" />
@@ -503,11 +519,6 @@
     <type fullname="Managers.MainMenuManager" preserve="all" />
     <type fullname="ManageSpriteScale" preserve="all" />
     <type fullname="MapPool" preserve="all" />
-    <type fullname="MatchCurveGraphic" preserve="all" />
-    <type fullname="MatchItemButton" preserve="all" />
-    <type fullname="MatchLineView" preserve="all" />
-    <type fullname="MatchRowLayout" preserve="all" />
-    <type fullname="MatchSubtask" preserve="all" />
     <type fullname="MenuPanel" preserve="all" />
     <type fullname="MicAnimationHandler" preserve="all" />
     <type fullname="MoleController" preserve="all" />
@@ -529,7 +540,6 @@
     <type fullname="NewClickableKeyboard" preserve="all" />
     <type fullname="NewMemoryAreaHandler" preserve="all" />
     <type fullname="NotificationIndicator" preserve="all" />
-    <type fullname="OrderWordsSubtask" preserve="all" />
     <type fullname="OrthographicCameraScript" preserve="all" />
     <type fullname="PackageController" preserve="all" />
     <type fullname="PageNumber" preserve="all" />
@@ -581,7 +591,6 @@
     <type fullname="ScoreCounter" preserve="all" />
     <type fullname="ScreenEdgeColliders" preserve="all" />
     <type fullname="ScreenFadeEffect" preserve="all" />
-    <type fullname="ScrollDragRelay" preserve="all" />
     <type fullname="ScrollView" preserve="all" />
     <type fullname="SearchingOpponentPanelController" preserve="all" />
     <type fullname="SentenceCompletionQuiz" preserve="all" />
@@ -629,8 +638,6 @@
     <type fullname="SubTaskFeedback" preserve="all" />
     <type fullname="SubtaskLayoutConfig" preserve="all" />
     <type fullname="SubtasksBuilder" preserve="all" />
-    <type fullname="TableCellInput" preserve="all" />
-    <type fullname="TableSubtask" preserve="all" />
     <type fullname="TaskLayoutManager" preserve="all" />
     <type fullname="TaskLevelIcon" preserve="all" />
     <type fullname="TaskNavigationBar" preserve="all" />
@@ -725,7 +732,6 @@
     <type fullname="VTWordConnectGenerator" preserve="all" />
     <type fullname="WavesMovement" preserve="all" />
     <type fullname="WinnerPanelController" preserve="all" />
-    <type fullname="WordChipView" preserve="all" />
     <type fullname="WordConnect.WordsConnect" preserve="all" />
     <type fullname="WordImage" preserve="all" />
     <type fullname="WordInfoBubble" preserve="all" />
@@ -741,7 +747,6 @@
     <type fullname="WordsMatchingQuizManagement" preserve="all" />
     <type fullname="WordsOnBoardManager" preserve="all" />
     <type fullname="WordTreeManager" preserve="all" />
-    <type fullname="WrapLayoutGroup" preserve="all" />
     <type fullname="WrongAnswerEffect" preserve="all" />
     <type fullname="YesNoPopup" preserve="all" />
     <type fullname="CategoryGroupInfo" preserve="nothing" serialized="true" />
@@ -785,6 +790,8 @@
     <type fullname="LetterAsset" preserve="nothing" serialized="true" />
     <type fullname="LettersDisplaySetting" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.LettersSliderTracingRound/TexturesData" preserve="nothing" serialized="true" />
+    <type fullname="com.kideo.learn.english.NewMap.MapPath" preserve="nothing" serialized="true" />
+    <type fullname="com.kideo.learn.english.NewMap.PathArea" preserve="nothing" serialized="true" />
     <type fullname="GameInfra.LeaderBoard.LBRequest" preserve="nothing" serialized="true" />
     <type fullname="GameInfra.LeaderBoard.LBTab" preserve="nothing" serialized="true" />
     <type fullname="GameInfra.ParentControll/NumbWord" preserve="nothing" serialized="true" />
@@ -793,8 +800,6 @@
     <type fullname="Wordsmetadatum" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.Round/InstructionData" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.NewMap.LevelIconEntry" preserve="nothing" serialized="true" />
-    <type fullname="com.kideo.learn.english.NewMap.MapPath" preserve="nothing" serialized="true" />
-    <type fullname="com.kideo.learn.english.NewMap.PathArea" preserve="nothing" serialized="true" />
     <type fullname="ExamLocalStringByName" preserve="nothing" serialized="true" />
     <type fullname="ExamScoreData" preserve="nothing" serialized="true" />
     <type fullname="YouWinTextByScore" preserve="nothing" serialized="true" />
@@ -807,6 +812,9 @@
     <type fullname="com.kideo.learn.english.EggsActivityManager/DifficultySettings" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.Pipes.PipePathStructure" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.Feedback.ResultDef" preserve="nothing" serialized="true" />
+    <type fullname="com.kideo.learn.english.VocaCity.CurrencyPresentation" preserve="nothing" serialized="true" />
+    <type fullname="com.kideo.learn.english.VocaCity.IslandDefinition/BuildingAnchor" preserve="nothing" serialized="true" />
+    <type fullname="com.kideo.learn.english.VocaCity.ZoneDefinition" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.Avatar3D.Avatar3DCameraFocus/View" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.Avatar3D.Avatar3DTheme/IconOverride" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.Avatar3D.Avatar3DTheme/LightingPreset" preserve="nothing" serialized="true" />
@@ -832,7 +840,7 @@
     <type fullname="ThirdActivityInfo" preserve="nothing" serialized="true" />
     <type fullname="ArenaStickerCatalog/StickerEntry" preserve="nothing" serialized="true" />
     <type fullname="SoundRepositroy/NamedSound" preserve="nothing" serialized="true" />
-    <type fullname="com.kideo.learn.english.Avatar3D.Avatar3DAudienceCategory" preserve="nothing" serialized="true" />
+    <type fullname="com.kideo.learn.english.Avatar3D.Avatar3DDefaultOutfit" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.Avatar3D.Avatar3DFaceSliderInfo" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.Avatar3D.Avatar3DItemInfo" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.learn.english.Avatar3D.Avatar3DOutfitSlot" preserve="nothing" serialized="true" />
