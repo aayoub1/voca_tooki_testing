@@ -33,18 +33,16 @@
     </div>
     <script>
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/e44a56aec4ea4bd146e240f5611f96db.loader.js";
+      var loaderUrl = buildUrl + "/000ca468b383964832fa15a97bb50aae.loader.js";
       var config = {
-        dataUrl: buildUrl + "/be47cd2962054416f3cbbe347f12416a.data.gz",
-        frameworkUrl: buildUrl + "/925483b7e806a0cc61096aa372b3b9a0.framework.js",
-        codeUrl: buildUrl + "/f584adf95fe2dd99effad86e5eedb1e1.wasm.gz",
+        dataUrl: buildUrl + "/9e9f5440e4ed1195f738cb8df9c77a09.data.unityweb",
+        frameworkUrl: buildUrl + "/9cfc79e7920413bc72987513c89a142b.framework.js.unityweb",
+        codeUrl: buildUrl + "/a0257282736f0dca73c8aad386cc89bf.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Kideo Tech",
         productName: "Voca Tooki",
-        productVersion: "4.6.0",
+        productVersion: "5.0.0",
       };
-      // Test builds save every persistentDataPath change (the Voca City Stub files too) to browser storage.
-      config.autoSyncPersistentDataPath = true;
 
       var container = document.querySelector("#unity-container");
       var gameInstance = null;
@@ -106,43 +104,7 @@
           alert(message);
         });
       };
-      // GitHub Pages copy: the code and data ship gzipped (100 MB file limit) and are unpacked here before the loader starts.
-      function unpackGz(url, type, share, done) {
-        return fetch(url).then(function (res) {
-          if (!res.ok) throw new Error(url + " " + res.status);
-          var total = Number(res.headers.get("Content-Length")) || 0, seen = 0, parts = [];
-          var reader = res.body.getReader();
-          function pump() {
-            return reader.read().then(function (r) {
-              if (r.done) return;
-              parts.push(r.value);
-              seen += r.value.length;
-              if (total) progressBarFull.style.width = (done + share * Math.min(seen / total, 1)) * 100 + "%";
-              return pump();
-            });
-          }
-          return pump().then(function () {
-            var raw = new Blob(parts);
-            var head = parts.length ? parts[0] : new Uint8Array(0);
-            // A host may already unpack .gz on the way (Content-Encoding); only unpack real gzip bytes.
-            if (head[0] === 0x1f && head[1] === 0x8b)
-              return new Response(raw.stream().pipeThrough(new DecompressionStream("gzip"))).blob();
-            return raw;
-          });
-        }).then(function (blob) {
-          return URL.createObjectURL(new Blob([blob], { type: type }));
-        });
-      }
-      unpackGz(config.codeUrl, "application/wasm", 0.25, 0).then(function (codeBlobUrl) {
-        config.codeUrl = codeBlobUrl;
-        return unpackGz(config.dataUrl, "application/octet-stream", 0.25, 0.25);
-      }).then(function (dataBlobUrl) {
-        config.dataUrl = dataBlobUrl;
-        document.body.appendChild(script);
-      }).catch(function (e) {
-        console.error("Could not unpack the game files:", e);
-        alert("The game could not load. Please reload the page.");
-      });
+      document.body.appendChild(script);
     </script>
  
     <!-- BEGIN WEBGL FILE BROWSER LIB -->
