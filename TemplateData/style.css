@@ -1,7 +1,10 @@
 body { padding: 0; margin: 0 }
 #unity-container { position: absolute }
 #unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%) }
-#unity-container.unity-mobile { width: 100%; height: 100% }
+#unity-container.unity-mobile { position: fixed; left: 0; top: 0; width: 100vw; height: 100vh; height: 100dvh; overflow: hidden }
+.unity-mobile #unity-canvas { display: block; touch-action: none }
+.unity-mobile #unity-loading-bar { top: 45% }
+.unity-mobile #unity-logo { width: min(944px, 90vw); height: min(343px, 60vh); background-size: contain }
 #unity-canvas { background: url('bg.png') no-repeat center }
 .unity-mobile #unity-canvas { width: 100%; height: 100% }
 #unity-loading-bar { position: absolute; left: 50%; top: 26%; transform: translate(-50%, -50%); display: none }

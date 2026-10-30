@@ -1,0 +1,12 @@
+{
+  "name": "Voca Tooki",
+  "short_name": "Voca Tooki",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#f4e6c8",
+  "theme_color": "#f4e6c8",
+  "icons": [
+    { "src": "TemplateData/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "TemplateData/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
