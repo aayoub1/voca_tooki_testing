@@ -84,6 +84,13 @@ var vtGame = (function () {
   }
   var MUTE = { x: W - 26, y: H - 24, r: 15 };   // speaker button, bottom-right of the game
 
+  // Moving things are drawn on whole screen pixels: at sub-pixel positions their edges turn soft
+  // and sharp from frame to frame, which reads as shaking on a 100%-scaled screen.
+  function px(v) { return Math.round(v * scale) / scale; }
+  // Things that move with the sand start a whole number of pixels from its scroll position, so
+  // snapping both keeps them in step instead of wobbling by a pixel against the ground.
+  function withGround(x) { return scrollNear + px(x - scrollNear); }
+
   function rand(a, b) { return a + Math.random() * (b - a); }
   function pick(list) { return list[Math.floor(Math.random() * list.length)]; }
 
@@ -113,7 +120,7 @@ var vtGame = (function () {
   function spawnObstacle() {
     var kinds = speed > 380 ? ["rock", "rock2", "crab", "pillar", "coconut", "urchin"] : ["rock", "rock2", "crab", "coconut"];
     var kind = pick(kinds), o = OBSTACLES[kind];
-    obstacles.push({ kind: kind, x: W + 20, w: o.w, h: o.h, spin: 0 });
+    obstacles.push({ kind: kind, x: withGround(W + 20), w: o.w, h: o.h, spin: 0 });
   }
 
   function spawnLetter() {
@@ -123,7 +130,7 @@ var vtGame = (function () {
     // Keep low letters away from obstacles so every letter can be reached.
     for (var i = 0; i < obstacles.length; i++)
       if (Math.abs(obstacles[i].x - (W + 20)) < 80 && y > GROUND - 60) y = GROUND - 105;
-    letters.push({ ch: ch, x: W + 20, y: y, bob: rand(0, 6) });
+    letters.push({ ch: ch, x: withGround(W + 20), y: y, bob: rand(0, 6) });
   }
 
   function update(dt) {
@@ -184,9 +191,9 @@ var vtGame = (function () {
     var k = BG.ground ? H / BG.h : 1, tileW = BG.w * k;
     var start = Math.floor(-offset / tileW);
     for (var i = start; i * tileW + offset < W; i++) {
-      var x = i * tileW + offset;
-      if (i % 2) { ctx.save(); ctx.translate(x + tileW, 0); ctx.scale(-1, 1); ctx.drawImage(img.bg, 0, sy, BG.w, sh, 0, dy, tileW, dh); ctx.restore(); }
-      else ctx.drawImage(img.bg, 0, sy, BG.w, sh, x, dy, tileW, dh);
+      var x = px(i * tileW) + px(offset), w = px((i + 1) * tileW) - px(i * tileW);
+      if (i % 2) { ctx.save(); ctx.translate(x + w, 0); ctx.scale(-1, 1); ctx.drawImage(img.bg, 0, sy, BG.w, sh, 0, dy, w, dh); ctx.restore(); }
+      else ctx.drawImage(img.bg, 0, sy, BG.w, sh, x, dy, w, dh);
     }
   }
   function drawBackground() {
@@ -198,7 +205,7 @@ var vtGame = (function () {
 
   function drawSheet(sheet, def, frame, x, groundY) {
     var w = def.frameW * TOOKI_SCALE, h = def.frameH * TOOKI_SCALE;
-    ctx.drawImage(sheet, frame * def.frameW, 0, def.frameW, def.frameH, x - w / 2, groundY - h + 2, w, h);
+    ctx.drawImage(sheet, frame * def.frameW, 0, def.frameW, def.frameH, px(x - w / 2), px(groundY - h + 2), w, h);
   }
 
   function drawBird() {
@@ -216,9 +223,9 @@ var vtGame = (function () {
     var def = OBSTACLES[o.kind], i = img[o.kind];
     if (!ready(i)) return;
     if (def.rolls) {
-      ctx.save(); ctx.translate(o.x + o.w / 2, GROUND - o.h / 2 + 1); ctx.rotate(o.spin);
+      ctx.save(); ctx.translate(px(o.x + o.w / 2), GROUND - o.h / 2 + 1); ctx.rotate(o.spin);
       ctx.drawImage(i, -o.w / 2, -o.h / 2, o.w, o.h); ctx.restore();
-    } else ctx.drawImage(i, o.x, GROUND - o.h + 2, o.w, o.h);
+    } else ctx.drawImage(i, px(o.x), GROUND - o.h + 2, o.w, o.h);
   }
 
   // Each lettered coin is rendered once into a small canvas and moved as one image. Drawn live, the
@@ -248,18 +255,18 @@ var vtGame = (function () {
   }
 
   function drawLetter(l) {
-    var y = l.y + Math.sin(t * 4 + l.bob) * 4, r = COIN_R;
+    var x = px(l.x), y = px(l.y + Math.sin(t * 4 + l.bob) * 4), r = COIN_R;
     if (l.ch === word.charAt(wordIndex)) {
       ctx.globalAlpha = 0.75 + Math.sin(t * 8) * 0.25;
-      ctx.drawImage(haloSprite(), l.x - 34, y - 34, 68, 68);
+      ctx.drawImage(haloSprite(), x - 34, y - 34, 68, 68);
       ctx.globalAlpha = 1;
     }
     var sprite = coinSprite(l.ch);
-    if (sprite) { ctx.drawImage(sprite, l.x - r, y - r, r * 2, r * 2); return; }
-    if (ready(img.coin)) ctx.drawImage(img.coin, l.x - r, y - r, r * 2, r * 2);
-    else { ctx.fillStyle = "#ffcc33"; ctx.beginPath(); ctx.arc(l.x, y, r, 0, 7); ctx.fill(); }
+    if (sprite) { ctx.drawImage(sprite, x - r, y - r, r * 2, r * 2); return; }
+    if (ready(img.coin)) ctx.drawImage(img.coin, x - r, y - r, r * 2, r * 2);
+    else { ctx.fillStyle = "#ffcc33"; ctx.beginPath(); ctx.arc(x, y, r, 0, 7); ctx.fill(); }
     ctx.fillStyle = NAVY; ctx.font = "19px " + FONT;
-    ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(l.ch, l.x, y + 1);
+    ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(l.ch, x, y + 1);
   }
 
   function drawEffect(e) {
