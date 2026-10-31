@@ -12,51 +12,202 @@
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="apple-touch-icon" href="TemplateData/icon-192.png">
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="preload" as="font" type="font/woff" href="TemplateData/fredoka-one.woff" crossorigin>
+    <link rel="preload" as="image" href="TemplateData/g-bg.webp">
     <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="unity-webview.js"></script>
-    <script src="libmp3lame.js"></script>
+    <!-- Not needed until the game runs, so they must not hold up the loading screen.
+         Deferred scripts still run in this order, long before Unity calls into them. -->
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script defer src="unity-webview.js"></script>
+    <script defer src="libmp3lame.js"></script>
   
     <!-- MICROPHONE PRO START -->
-    <script src='./microphone.js'></script>
+    <script defer src='./microphone.js'></script>
     <!-- MICROPHONE PRO END -->
-<script src="https://unpkg.com/mic-recorder-to-mp3@2.2.1/dist/index.min.js"></script>
+<script defer src="https://unpkg.com/mic-recorder-to-mp3@2.2.1/dist/index.min.js"></script>
 
 </head>
   <body>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas"></canvas>
-      <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
-        </div>
-      </div>
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
         <div id="unity-build-title">Voca Tooki</div>
       </div>
     </div>
+
+    <!-- Loading screen: stays up while Unity downloads and while the first screen's
+         Addressables download (Assets/Scripts/WebLoadingBridge.cs hides it). -->
+    <div id="vt-loader">
+      <div id="vt-stage">
+        <!-- The official lockup, cropped from Assets/Textures and Sprites/voca_tooki_splash_screen.png. -->
+        <h1 id="vt-title"><img src="TemplateData/vt-lockup.webp" alt="Voca Tooki, where languages come easy!"></h1>
+        <!-- A small runner to play while waiting (TemplateData/vt-game.js). -->
+        <div id="vt-game" aria-label="Mini game: tap or press Space to jump">
+          <canvas id="vt-game-canvas" width="640" height="300"></canvas>
+        </div>
+        <div id="vt-progress">
+          <div id="vt-status">Warming up…</div>
+          <div id="vt-bar"><div id="vt-bar-fill"></div><span id="vt-pct">0%</span></div>
+          <!-- Replaces the bar when the game is ready. -->
+          <button id="vt-go" type="button"><span class="vt-go-arrow">&#9654;</span> Let's go!</button>
+        </div>
+        <p id="vt-tip">Tap a word to hear how it sounds!</p>
+      </div>
+    </div>
+
+    <!-- Phones in portrait: the game is landscape-only. -->
+    <div id="vt-rotate">
+      <div class="vt-phone"><div class="vt-phone-screen"><img src="TemplateData/tooki-hi.webp" alt=""></div></div>
+      <p class="vt-rotate-text">Turn your phone sideways to play!</p>
+      <button id="vt-play" type="button">&#9654; Play</button>
+      <p id="vt-rotate-pct"></p>
+    </div>
+
     <script>
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/000ca468b383964832fa15a97bb50aae.loader.js";
+      var loaderUrl = buildUrl + "/ec1779e8fddf7bc57ee51bacc580c245.loader.js";
       var config = {
-        dataUrl: buildUrl + "/9e9f5440e4ed1195f738cb8df9c77a09.data.unityweb",
-        frameworkUrl: buildUrl + "/9cfc79e7920413bc72987513c89a142b.framework.js.unityweb",
-        codeUrl: buildUrl + "/a0257282736f0dca73c8aad386cc89bf.wasm.unityweb",
+        dataUrl: buildUrl + "/5c9f5ac5b9463f24e152627662550cd3.data",
+        frameworkUrl: buildUrl + "/48656b971e2888aa2232cf6334922990.framework.js",
+        codeUrl: buildUrl + "/3dff5bbb6e2ab8a63c71b2b1d2aab9ba.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Kideo Tech",
         productName: "Voca Tooki",
         productVersion: "5.0.0",
       };
 
-      var container = document.querySelector("#unity-container");
-      var gameInstance = null;
+      // The loading screen. Unity reports here in two phases: createUnityInstance progress
+      // (engine download), then the first screen's Addressables download through
+      // WebLoadingBridge.jslib (attach / sceneProgress / hide).
+      var vtLoader = (function () {
+        var ENGINE_SHARE = 0.6;           // part of the bar for the engine download
+        var DOWNLOAD_END = 0.9;           // the first screen's download fills the bar up to here
+        var BRIDGE_WAIT_MS = 2000;        // builds without the bridge hide once Unity is up
+        var MAX_SCENE_WAIT_MS = 120000;   // never cover the game for longer than this
 
+        var root = document.getElementById("vt-loader");
+        var fill = document.getElementById("vt-bar-fill");
+        var pctText = document.getElementById("vt-pct");
+        var rotatePct = document.getElementById("vt-rotate-pct");
+        var status = document.getElementById("vt-status");
+        var tip = document.getElementById("vt-tip");
+
+        var engineLines = ["Warming up…", "Waking up Tooki…", "Packing Tooki's backpack…", "Sharpening the pencils…"];
+        var sceneLines = ["Getting the islands ready…", "Hiding words to find…", "Polishing the treasure…"];
+        var openLines = ["Almost there!", "Unrolling the map…", "Tooki is landing…"];
+        var tips = [
+          "Tap a word to hear how it sounds!",
+          "Say the words out loud. Practice makes perfect!",
+          "Every island has new words to find.",
+          "Made a mistake? That's how we learn. Try again!",
+          "A little practice every day helps you remember.",
+          "Did you know? Parrots can learn words too, just like you!",
+          "Collect treasures as you learn new words."
+        ];
+
+        var target = 0, shown = 0, lastPct = -1;
+        var phase = 1, attached = false, sceneReported = false, hidden = false;
+        // Phase 2 creeps from creepFrom toward creepTo, so the bar never looks stuck: before Unity
+        // reports bytes, and again while the downloaded scene opens.
+        var creepFrom = ENGINE_SHARE, creepTo = DOWNLOAD_END, creepSince = 0, creepMs = 15000;
+        var lineIndex = 0, tipIndex = 0, timers = [];
+
+        function every(ms, fn) { timers.push(setInterval(fn, ms)); }
+        function swap(el, text) {
+          el.classList.add("vt-swap");
+          setTimeout(function () { el.textContent = text; el.classList.remove("vt-swap"); }, 300);
+        }
+        function raise(v) { target = Math.max(target, Math.min(v, 1)); }
+
+        function render(v) {
+          var pct = Math.floor(v * 100);
+          fill.style.width = (v * 100) + "%";
+          if (pct !== lastPct) { lastPct = pct; pctText.textContent = rotatePct.textContent = pct + "%"; }
+        }
+
+        function frame(now) {
+          if (hidden) return;
+          if (phase === 2 && (!sceneReported || creepTo > DOWNLOAD_END))
+            raise(creepFrom + (creepTo - creepFrom) * (1 - Math.exp(-(now - creepSince) / creepMs)));
+          shown += (target - shown) * 0.06;
+          render(shown);
+          requestAnimationFrame(frame);
+        }
+
+        every(3500, function () {
+          var lines = phase === 1 ? engineLines : creepTo > DOWNLOAD_END ? openLines : sceneLines;
+          lineIndex = (lineIndex + 1) % lines.length;
+          swap(status, lines[lineIndex]);
+        });
+        every(6000, function () { tipIndex = (tipIndex + 1) % tips.length; swap(tip, tips[tipIndex]); });
+        render(0);
+        requestAnimationFrame(frame);
+
+        // When Voca Tooki is ready the bar turns into a "Let's go" button and the loader waits for
+        // it, so nobody is pulled out of the mini-game, and the click lets the game start with
+        // sound (browsers only allow audio after a user gesture) and, on Android, fullscreen.
+        var offered = false;
+        function hide() {
+          if (hidden || offered) return;
+          offered = true;
+          timers.forEach(clearInterval);
+          raise(1);
+          swap(status, "Voca Tooki is ready!");
+          var go = document.getElementById("vt-go");
+          go.parentNode.classList.add("vt-go-show");
+          go.addEventListener("click", finish);
+          document.addEventListener("keydown", function onEnter(e) {
+            if (e.code !== "Enter") return;
+            document.removeEventListener("keydown", onEnter);
+            finish();
+          });
+        }
+        function finish() {
+          if (hidden) return;
+          hidden = true;
+          if (window.vtGame) vtGame.stop();
+          timers.forEach(clearInterval);
+          render(1);
+          rotatePct.textContent = "";
+          root.classList.add("vt-done");
+          setTimeout(function () { root.style.display = "none"; }, 600);
+        }
+
+        return {
+          unityProgress: function (p) { raise(ENGINE_SHARE * p); },
+          unityReady: function () {
+            if (offered || hidden) return;
+            phase = 2;
+            creepSince = performance.now();
+            raise(ENGINE_SHARE);
+            lineIndex = -1;
+            swap(status, sceneLines[0]);
+            setTimeout(function () { if (!attached) hide(); }, BRIDGE_WAIT_MS);
+            setTimeout(hide, MAX_SCENE_WAIT_MS);
+          },
+          attach: function () { attached = true; },
+          sceneProgress: function (p) {
+            sceneReported = true;
+            raise(ENGINE_SHARE + (DOWNLOAD_END - ENGINE_SHARE) * p);
+            if (p >= 1 && creepTo === DOWNLOAD_END) {
+              creepFrom = target; creepTo = 0.99; creepSince = performance.now(); creepMs = 8000;
+              lineIndex = 0;
+              swap(status, openLines[0]);
+            }
+          },
+          hide: hide
+        };
+      })();
+
+    </script>
+    <script src="TemplateData/vt-game.js"></script>
+    <script>
+      var container = document.querySelector("#unity-container");
+
+      var gameInstance = null;
       var canvas = document.querySelector("#unity-canvas");
-      var loadingBar = document.querySelector("#unity-loading-bar");
-      var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var width0 = "1366px";
       var height0 = "768px";
@@ -65,10 +216,13 @@
       if (isMobile) {
         container.className = "unity-mobile";
         config.devicePixelRatio = 1;
+        // iPhone Safari has no fullscreen API, so it only gets "turn your phone sideways"
+        // (and "Add to Home Screen" for fullscreen). Android gets a Play button as well.
+        var canFullscreen = !!(document.documentElement.requestFullscreen || document.documentElement.webkitRequestFullscreen);
+        document.documentElement.classList.add("vt-mobile", canFullscreen ? "vt-can-fullscreen" : "vt-no-fullscreen");
         // Browsers only allow fullscreen from a user gesture, so enter it on the first tap
         // (and again after the player leaves it). The whole page goes fullscreen, not the
         // container, so web views and the file browser popup stay visible.
-        // iPhone Safari has no fullscreen API; there "Add to Home Screen" gives fullscreen.
         document.addEventListener("pointerup", function () {
           var root = document.documentElement;
           var request = root.requestFullscreen || root.webkitRequestFullscreen;
@@ -77,11 +231,16 @@
             if (screen.orientation && screen.orientation.lock) return screen.orientation.lock("landscape");
           }).catch(function () {});
         }, true);
+        var onFullscreenChange = function () {
+          var on = !!(document.fullscreenElement || document.webkitFullscreenElement);
+          document.documentElement.classList.toggle("vt-fullscreen", on);
+        };
+        document.addEventListener("fullscreenchange", onFullscreenChange);
+        document.addEventListener("webkitfullscreenchange", onFullscreenChange);
       } else {
         canvas.style.width = "1366px";
         canvas.style.height = "768px";
       }
-      loadingBar.style.display = "block";
 
       document.addEventListener(
         'fullscreenchange',
@@ -107,12 +266,12 @@
       script.src = loaderUrl;
       script.onload = () => {
         createUnityInstance(canvas, config, (progress) => {
-          progressBarFull.style.width = 100 * progress + "%";
+          vtLoader.unityProgress(progress);
         }).then((unityInstance) => {
-          gameInstance = unityInstance;
 
+          gameInstance = unityInstance;
           window.unityInstance = unityInstance;
-          loadingBar.style.display = "none";
+          vtLoader.unityReady();
           fullscreenButton.onclick = () => {
             var p = document.getElementById('unity-container');
             var c = document.getElementById('unity-canvas');

@@ -758,11 +758,11 @@
     <type fullname="CategoryGroupInfo" preserve="nothing" serialized="true" />
     <type fullname="ColorInfo" preserve="nothing" serialized="true" />
     <type fullname="MapPool/MapPoolEntry" preserve="nothing" serialized="true" />
-    <type fullname="UIRefData/UITextElement" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.gameinfra.Dialogue.AIModel" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.gameinfra.Dialogue.CharacterAssets" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.gameinfra.Dialogue.Prompts" preserve="nothing" serialized="true" />
     <type fullname="com.kideo.gameinfra.Dialogue.TextPricing" preserve="nothing" serialized="true" />
+    <type fullname="UIRefData/UITextElement" preserve="nothing" serialized="true" />
     <type fullname="Metadata" preserve="nothing" serialized="true" />
     <type fullname="Word" preserve="nothing" serialized="true" />
     <type fullname="Wordsmetadatum" preserve="nothing" serialized="true" />

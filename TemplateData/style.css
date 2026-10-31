@@ -3,17 +3,140 @@ body { padding: 0; margin: 0 }
 #unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%) }
 #unity-container.unity-mobile { position: fixed; left: 0; top: 0; width: 100vw; height: 100vh; height: 100dvh; overflow: hidden }
 .unity-mobile #unity-canvas { display: block; touch-action: none }
-.unity-mobile #unity-loading-bar { top: 45% }
-.unity-mobile #unity-logo { width: min(944px, 90vw); height: min(343px, 60vh); background-size: contain }
-#unity-canvas { background: url('bg.png') no-repeat center }
+#unity-canvas { background: #fbf3e8 }
 .unity-mobile #unity-canvas { width: 100%; height: 100% }
-#unity-loading-bar { position: absolute; left: 50%; top: 26%; transform: translate(-50%, -50%); display: none }
-#unity-logo { width: 944px; height: 343px; background: url('vt-logo.png') no-repeat center top }
-#unity-progress-bar-empty { width: 188px; height: 24px; margin-top: 10px; margin-left: auto; margin-right: auto; position:absolute; left:3.75%; right:0;background: url('progress-bar-empty-light.png') no-repeat center }
-#unity-progress-bar-full { width: 0%; height: 24px; margin-top: 0px; background: url('progress-bar-full-light.png') no-repeat center }
 #unity-footer { position: relative }
 .unity-mobile #unity-footer { display: none }
 #unity-webgl-logo { float:left; width: 204px; height: 38px; background: url('webgl-logo.png') no-repeat center }
 #unity-build-title { float: right; margin-right: 10px; line-height: 38px; font-family: arial; font-size: 18px }
 #unity-fullscreen-button { float: left; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
 #unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
+.vt-mobile body { background: #fbf3e8 }
+
+/* ---------- Loading screen ---------- */
+@font-face { font-family: "Fredoka One"; src: url('fredoka-one.woff') format('woff'); font-display: swap }
+
+/* Warm cream with a faint line-doodle pattern (cream-pattern.webp, a seamless ChatGPT tile) frames the
+   colourful mini-game. #vt-stage is a centred 16:9 box holding one column (title, mini-game, progress,
+   tip); --u is 1% of the stage width, so everything scales together. */
+#vt-loader, #vt-rotate {
+  position: fixed; left: 0; top: 0; width: 100vw; height: 100vh; height: 100dvh; overflow: hidden;
+  background: #fbf3e8;
+  font-family: "Fredoka One", ui-rounded, "Arial Rounded MT Bold", "Trebuchet MS", system-ui, sans-serif;
+  color: #1d2a4d; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent
+}
+#vt-loader { z-index: 20; transition: opacity .5s ease }
+/* The doodles stay at the edges: a soft cream glow clears the centre behind the column. */
+#vt-loader::before, #vt-rotate::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: .75;
+  background: radial-gradient(ellipse 42% 52% at 50% 50%, #fbf3e8 55%, rgba(251, 243, 232, 0) 100%), url('cream-pattern.webp') 0 0 / 380px 380px
+}
+#vt-rotate { isolation: isolate }
+#vt-loader.vt-done { opacity: 0; pointer-events: none }
+#vt-stage {
+  --u: min(1vw, 1.7778vh);
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: calc(var(--u) * 100); height: calc(var(--u) * 56.25);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: calc(var(--u) * 1.6)
+}
+@supports (height: 1dvh) { #vt-stage { --u: min(1vw, 1.7778dvh) } }
+
+#vt-title { margin: 0; line-height: 0; animation: vt-drop .6s cubic-bezier(.2, 1.4, .5, 1) both }
+#vt-title img {
+  display: block; width: calc(var(--u) * 38);
+  /* a tight darker edge so the yellow lifts off the cream, then a soft warm shadow under it */
+  filter: drop-shadow(0 calc(var(--u) * .18) 0 rgba(150, 95, 0, .45)) drop-shadow(0 calc(var(--u) * .7) calc(var(--u) * .9) rgba(110, 70, 10, .3))
+}
+
+#vt-game {
+  position: relative; flex: none; width: calc(var(--u) * 62); aspect-ratio: 640 / 300; overflow: hidden; cursor: pointer;
+  border: calc(var(--u) * .45) solid #1d2a4d; border-radius: calc(var(--u) * 2.2); touch-action: none; background: #8fdcfa;
+  box-shadow: 0 calc(var(--u) * .9) 0 rgba(29, 42, 77, .13), 0 calc(var(--u) * 1.4) calc(var(--u) * 3) rgba(60, 40, 10, .18)
+}
+#vt-game-canvas { display: block; width: 100%; height: 100% }
+
+/* Status line + bar; the bar turns into the "Let's go" button when Voca Tooki is ready.
+   The fixed height keeps the column from jumping when that happens. */
+#vt-progress {
+  position: relative; isolation: isolate; flex: none; width: calc(var(--u) * 44); height: calc(var(--u) * 9.4);
+  display: flex; flex-direction: column; align-items: center; justify-content: flex-start; text-align: center
+}
+#vt-status {
+  font-size: calc(var(--u) * 2.1); margin-bottom: calc(var(--u) * .8); color: #1d2a4d; transition: opacity .3s, transform .3s
+}
+#vt-bar {
+  position: relative; align-self: stretch; height: calc(var(--u) * 2.8); border-radius: 999px; overflow: hidden;
+  background: #fff; border: calc(var(--u) * .3) solid #1d2a4d
+}
+#vt-bar-fill {
+  height: 100%; width: 0; border-radius: 999px;
+  background: repeating-linear-gradient(-45deg, #ffcc33 0 calc(var(--u) * 1.2), #ffb000 calc(var(--u) * 1.2) calc(var(--u) * 2.4));
+  background-size: calc(var(--u) * 3.4) 100%; animation: vt-stripes .8s linear infinite
+}
+#vt-pct { position: absolute; inset: 0; line-height: calc(var(--u) * 2.8); font-size: calc(var(--u) * 1.6) }
+
+#vt-go {
+  display: none; position: relative; overflow: hidden; cursor: pointer;
+  font: inherit; font-size: calc(var(--u) * 2.8); letter-spacing: .02em; color: #fff;
+  text-shadow: 0 calc(var(--u) * .2) 0 rgba(120, 30, 20, .45);
+  padding: calc(var(--u) * .8) calc(var(--u) * 4.2); border: calc(var(--u) * .35) solid #1d2a4d; border-radius: 999px;
+  background: linear-gradient(180deg, #ff8a5c 0%, #f05a46 55%, #d9432f 100%);
+  box-shadow: 0 calc(var(--u) * .6) 0 #a8352a, 0 calc(var(--u) * 1.2) calc(var(--u) * 2.4) rgba(168, 53, 42, .45);
+  animation: vt-go-in .5s cubic-bezier(.2, 1.6, .5, 1) both, vt-go-bounce 1.4s ease-in-out .5s infinite
+}
+/* light sweep across the button */
+#vt-go::before {
+  content: ""; position: absolute; top: 0; bottom: 0; left: -40%; width: 30%; transform: skewX(-20deg);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .55), transparent); animation: vt-go-shine 2.2s ease-in-out .8s infinite
+}
+.vt-go-arrow { display: inline-block; animation: vt-go-arrow .7s ease-in-out infinite alternate }
+#vt-go:hover { filter: brightness(1.06) }
+#vt-go:active { transform: translateY(calc(var(--u) * .4)); box-shadow: 0 calc(var(--u) * .2) 0 #a8352a; animation: none }
+/* soft pulsing ring behind it */
+#vt-progress.vt-go-show::after {
+  content: ""; position: absolute; left: 50%; bottom: calc(var(--u) * .1); width: calc(var(--u) * 26); height: calc(var(--u) * 6.2);
+  transform: translateX(-50%); border-radius: 999px; z-index: -1; background: rgba(255, 214, 90, .7); animation: vt-go-ring 1.4s ease-out .5s infinite
+}
+#vt-progress.vt-go-show #vt-bar { display: none }
+#vt-progress.vt-go-show #vt-go { display: block }
+
+#vt-tip {
+  flex: none; margin: calc(var(--u) * -.6) 0 0; width: calc(var(--u) * 62); text-align: center;
+  font-size: calc(var(--u) * 1.75); line-height: 1.25; color: #6b6255; transition: opacity .3s, transform .3s
+}
+.vt-swap { opacity: 0; transform: translateY(calc(var(--u) * .6)) }
+
+@keyframes vt-drop { from { opacity: 0; transform: translateY(calc(var(--u) * -3)) } to { opacity: 1; transform: none } }
+@keyframes vt-stripes { to { background-position: calc(var(--u) * 3.4) 0 } }
+@keyframes vt-peek { 0%, 70%, 100% { transform: rotate(0) } 78% { transform: rotate(-8deg) } 86% { transform: rotate(6deg) } }
+@keyframes vt-go-in { from { opacity: 0; transform: scale(.5) } to { opacity: 1; transform: scale(1) } }
+@keyframes vt-go-bounce { 0%, 100% { transform: translateY(0) scale(1) } 50% { transform: translateY(calc(var(--u) * -.4)) scale(1.04) } }
+@keyframes vt-go-shine { 0% { left: -40% } 60%, 100% { left: 130% } }
+@keyframes vt-go-arrow { to { transform: translateX(calc(var(--u) * .5)) } }
+@keyframes vt-go-ring { from { opacity: .9; transform: translateX(-50%) scale(.85) } to { opacity: 0; transform: translateX(-50%) scale(1.35) } }
+
+/* ---------- Phones held upright ---------- */
+#vt-rotate { z-index: 30; display: none; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 4vmin }
+@media (orientation: portrait) { .vt-mobile #vt-rotate { display: flex } }
+.vt-phone {
+  width: 26vmin; height: 46vmin; border: 2.2vmin solid #1d2a4d; border-radius: 5vmin; background: #fff;
+  box-shadow: 0 2vmin 5vmin rgba(60, 40, 10, .18);
+  display: flex; align-items: center; justify-content: center; animation: vt-turn 2.6s ease-in-out infinite
+}
+.vt-phone-screen img { width: 18vmin; display: block }
+.vt-rotate-text { margin: 0 6vw; font-size: 6.5vmin; color: #1d2a4d }
+#vt-play {
+  display: none; font: inherit; font-size: 7vmin; color: #fff; cursor: pointer;
+  padding: 2.5vmin 10vmin; border: 1vmin solid #1d2a4d; border-radius: 999px;
+  background: linear-gradient(180deg, #ff8a5c 0%, #f05a46 55%, #d9432f 100%);
+  box-shadow: 0 1.4vmin 0 #a8352a; animation: vt-breathe-btn 1.6s ease-in-out infinite
+}
+#vt-play:active { transform: translateY(1vmin); box-shadow: 0 .4vmin 0 #a8352a }
+.vt-can-fullscreen:not(.vt-fullscreen) #vt-play { display: block }
+#vt-rotate-pct { margin: 0; font-size: 4.5vmin; color: #6b6255 }
+@keyframes vt-turn { 0%, 20% { transform: rotate(0) } 55%, 85% { transform: rotate(-90deg) } 100% { transform: rotate(0) } }
+@keyframes vt-breathe-btn { 50% { transform: scale(1.06) } }
+
+@media (prefers-reduced-motion: reduce) {
+  #vt-loader, #vt-loader *, #vt-rotate * { animation-duration: 0s !important; animation-iteration-count: 1 !important }
+}
