@@ -217,12 +217,12 @@ var vtGame = (function () {
     drawSheet(img["tooki-poses"], POSE, pose, x, y);
   }
 
-  // After a crash Tooki sways and three stars circle the head: the far half of the orbit is drawn
-  // behind the head, the near half in front of it.
+  // After a crash Tooki sways slightly and three stars circle the head: the far half of the orbit
+  // is drawn behind the head, the near half in front of it.
   function drawDizzy(x) {
     var d = t - overAt, cx = x + 1, cy = GROUND - 66;
     ctx.save();
-    ctx.translate(x, GROUND); ctx.rotate(Math.sin(d * 6) * 0.06); ctx.translate(-x, -GROUND);
+    ctx.translate(x, GROUND); ctx.rotate(Math.sin(d * 3) * 0.025); ctx.translate(-x, -GROUND);
     drawStars(cx, cy, d, true);
     drawSheet(img["tooki-dizzy"], DIZZY, 0, x, GROUND);
     drawStars(cx, cy, d, false);
@@ -230,7 +230,7 @@ var vtGame = (function () {
   }
   function drawStars(cx, cy, d, back) {
     for (var k = 0; k < 3; k++) {
-      var a = d * 5 + k * Math.PI * 2 / 3, depth = Math.sin(a);
+      var a = d * 3 + k * Math.PI * 2 / 3, depth = Math.sin(a);
       if ((depth < 0) !== back) continue;
       var size = 13 * (0.85 + depth * 0.15);
       ctx.drawImage(img.star, cx + Math.cos(a) * 30 - size / 2, cy + depth * 8 - size / 2, size, size * 0.9);
