@@ -33,10 +33,12 @@ var vtGame = (function () {
   });
   function ready(i) { return i.complete && i.naturalWidth > 0; }
 
+  // The canvas matches the on-screen pixel size exactly: a canvas the browser has to resample
+  // again makes moving sprites shimmer.
   var scale = 1;
   function resize() {
-    var s = Math.min(3, Math.max(1, Math.round((canvas.clientWidth / W) * (window.devicePixelRatio || 1) * 2) / 2));
-    if (s !== scale || canvas.width !== W * s) { scale = s; canvas.width = W * s; canvas.height = H * s; }
+    var w = Math.round(Math.min(W * 3, canvas.clientWidth * (window.devicePixelRatio || 1))) || W;
+    if (canvas.width !== w) { canvas.width = w; canvas.height = Math.round(w * H / W); scale = w / W; coinCache = {}; }
   }
 
   var state = "idle", running = true, overAt = 0;
@@ -223,16 +225,16 @@ var vtGame = (function () {
   // browser snaps the text to whole pixels while the coin moves smoothly, so the letter shook on it.
   var COIN_R = 18, coinCache = {}, halo = null;
   function coinSprite(ch) {
-    var key = ch + "@" + scale;
-    if (coinCache[key]) return coinCache[key];
+    if (coinCache[ch]) return coinCache[ch];
     if (!ready(img.coin) || (document.fonts && !document.fonts.check("19px 'Fredoka One'"))) return null;
     var c = document.createElement("canvas"), g = c.getContext("2d");
-    c.width = c.height = COIN_R * 2 * scale;
+    c.width = c.height = Math.ceil(COIN_R * 2 * scale);
+    g.imageSmoothingQuality = "high";
     g.scale(scale, scale);
     g.drawImage(img.coin, 0, 0, COIN_R * 2, COIN_R * 2);
     g.fillStyle = NAVY; g.font = "19px " + FONT; g.textAlign = "center"; g.textBaseline = "middle";
     g.fillText(ch, COIN_R, COIN_R + 1);
-    return (coinCache[key] = c);
+    return (coinCache[ch] = c);
   }
   // Soft glow behind the letter that's needed next; pulsing its opacity is far cheaper than shadowBlur.
   function haloSprite() {
@@ -319,6 +321,7 @@ var vtGame = (function () {
   function draw() {
     resize();
     ctx.setTransform(scale, 0, 0, scale, 0, 0);
+    ctx.imageSmoothingQuality = "high";   // the 2x art is shrunk; low quality flickers on moving edges
     drawBackground();
     obstacles.forEach(drawObstacle);
     letters.forEach(drawLetter);
@@ -330,10 +333,15 @@ var vtGame = (function () {
     drawMuteButton();
   }
 
-  var last = 0;
+  // Frame timestamps wobble by a few ms around the display's refresh interval while the screen
+  // still shows frames evenly, so moving by the raw time made everything shake. Steps are whole
+  // refresh intervals (learnt from the timestamps); a dropped frame still counts as two.
+  var last = 0, frameDt = 1 / 60, frames = 0;
   function frame(now) {
     if (!running) return;
-    var dt = Math.min(0.05, (now - (last || now)) / 1000); last = now;
+    var raw = last ? (now - last) / 1000 : 0; last = now;
+    if (raw > 0 && raw < frameDt * 1.5) frameDt += (raw - frameDt) * (frames++ < 30 ? 0.3 : 0.05);
+    var dt = raw > 0 ? Math.min(0.05, Math.max(1, Math.round(raw / frameDt)) * frameDt) : 0;
     update(dt); draw();
     requestAnimationFrame(frame);
   }
