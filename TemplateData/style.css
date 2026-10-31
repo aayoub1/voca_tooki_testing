@@ -25,7 +25,8 @@ body { padding: 0; margin: 0 }
   font-family: "Fredoka One", ui-rounded, "Arial Rounded MT Bold", "Trebuchet MS", system-ui, sans-serif;
   color: #1d2a4d; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent
 }
-#vt-loader { z-index: 20; transition: opacity .5s ease }
+/* the whole screen is the mini-game's tap area, so no double-tap zoom or panning */
+#vt-loader { z-index: 20; transition: opacity .5s ease; touch-action: none }
 /* The doodles stay at the edges: a soft cream glow clears the centre behind the column. */
 #vt-loader::before, #vt-rotate::before {
   content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: .75;

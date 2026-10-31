@@ -311,11 +311,16 @@ var vtGame = (function () {
     if (e.code === "Space" || e.code === "ArrowUp" || e.code === "KeyW") { e.preventDefault(); jump(); }
     else if (e.code === "KeyM") toggleMute();
   }
-  card.addEventListener("pointerdown", function (e) {
+  // A tap anywhere on the loading screen jumps (the frame alone is a small target on phones);
+  // real buttons like "Let's go!" keep their own clicks.
+  var tapArea = document.getElementById("vt-loader") || card;
+  function onTap(e) {
+    if (e.button > 0 || e.target.closest("button, a")) return;
     e.preventDefault();
     var r = canvas.getBoundingClientRect(), x = (e.clientX - r.left) * W / r.width, y = (e.clientY - r.top) * H / r.height;
     if (Math.hypot(x - MUTE.x, y - MUTE.y) <= MUTE.r + 6) toggleMute(); else jump();
-  });
+  }
+  tapArea.addEventListener("pointerdown", onTap);
   document.addEventListener("keydown", onKey);
 
   reset(); state = "idle";
@@ -324,6 +329,7 @@ var vtGame = (function () {
   return {
     stop: function () {
       running = false; document.removeEventListener("keydown", onKey);
+      tapArea.removeEventListener("pointerdown", onTap);
       if (audioCtx) audioCtx.close();
     }
   };
