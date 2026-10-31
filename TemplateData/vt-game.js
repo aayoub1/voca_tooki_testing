@@ -219,12 +219,43 @@ var vtGame = (function () {
     } else ctx.drawImage(i, o.x, GROUND - o.h + 2, o.w, o.h);
   }
 
+  // Each lettered coin is rendered once into a small canvas and moved as one image. Drawn live, the
+  // browser snaps the text to whole pixels while the coin moves smoothly, so the letter shook on it.
+  var COIN_R = 18, coinCache = {}, halo = null;
+  function coinSprite(ch) {
+    var key = ch + "@" + scale;
+    if (coinCache[key]) return coinCache[key];
+    if (!ready(img.coin) || (document.fonts && !document.fonts.check("19px 'Fredoka One'"))) return null;
+    var c = document.createElement("canvas"), g = c.getContext("2d");
+    c.width = c.height = COIN_R * 2 * scale;
+    g.scale(scale, scale);
+    g.drawImage(img.coin, 0, 0, COIN_R * 2, COIN_R * 2);
+    g.fillStyle = NAVY; g.font = "19px " + FONT; g.textAlign = "center"; g.textBaseline = "middle";
+    g.fillText(ch, COIN_R, COIN_R + 1);
+    return (coinCache[key] = c);
+  }
+  // Soft glow behind the letter that's needed next; pulsing its opacity is far cheaper than shadowBlur.
+  function haloSprite() {
+    if (halo) return halo;
+    var R = 34;
+    halo = document.createElement("canvas"); halo.width = halo.height = R * 2;
+    var g = halo.getContext("2d"), grad = g.createRadialGradient(R, R, COIN_R * 0.8, R, R, R);
+    grad.addColorStop(0, "rgba(255,214,64,.95)"); grad.addColorStop(1, "rgba(255,214,64,0)");
+    g.fillStyle = grad; g.fillRect(0, 0, R * 2, R * 2);
+    return halo;
+  }
+
   function drawLetter(l) {
-    var y = l.y + Math.sin(t * 4 + l.bob) * 4, needed = l.ch === word.charAt(wordIndex), r = 18;
-    if (needed) { ctx.save(); ctx.shadowColor = "rgba(255,214,64,.95)"; ctx.shadowBlur = 16 + Math.sin(t * 8) * 5; }
+    var y = l.y + Math.sin(t * 4 + l.bob) * 4, r = COIN_R;
+    if (l.ch === word.charAt(wordIndex)) {
+      ctx.globalAlpha = 0.75 + Math.sin(t * 8) * 0.25;
+      ctx.drawImage(haloSprite(), l.x - 34, y - 34, 68, 68);
+      ctx.globalAlpha = 1;
+    }
+    var sprite = coinSprite(l.ch);
+    if (sprite) { ctx.drawImage(sprite, l.x - r, y - r, r * 2, r * 2); return; }
     if (ready(img.coin)) ctx.drawImage(img.coin, l.x - r, y - r, r * 2, r * 2);
     else { ctx.fillStyle = "#ffcc33"; ctx.beginPath(); ctx.arc(l.x, y, r, 0, 7); ctx.fill(); }
-    if (needed) ctx.restore();
     ctx.fillStyle = NAVY; ctx.font = "19px " + FONT;
     ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(l.ch, l.x, y + 1);
   }
