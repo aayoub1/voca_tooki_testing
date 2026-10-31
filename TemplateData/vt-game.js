@@ -13,6 +13,7 @@ var vtGame = (function () {
   // Sprite sheets: frame boxes match the cut script (frames are bottom-aligned with 4px padding).
   var RUN = { frameW: 111, frameH: 148, frames: 6 };
   var POSE = { frameW: 136, frameH: 168, frames: 5, takeoff: 0, air: 1, flap: 2, land: 3, dizzy: 4 };
+  var DIZZY = { frameW: 136, frameH: 168, frames: 6 };   // stars circling the head after a crash
   var BG = { w: 1800, h: 600, ground: 477 };
   var TOOKI_SCALE = 0.62;   // of the sprite-sheet size
   var OBSTACLES = {   // drawn at half the sprite size; hit boxes are a bit smaller than the art
@@ -28,7 +29,7 @@ var vtGame = (function () {
   var canvas = document.getElementById("vt-game-canvas");
   var ctx = canvas.getContext("2d");
   var img = {};
-  ["tooki-run", "tooki-poses", "bg", "coin", "sparkle", "puff"].concat(Object.keys(OBSTACLES)).forEach(function (n) {
+  ["tooki-run", "tooki-poses", "tooki-dizzy", "bg", "coin", "sparkle", "puff"].concat(Object.keys(OBSTACLES)).forEach(function (n) {
     img[n] = new Image(); img[n].src = "TemplateData/g-" + n + ".webp";
   });
   function ready(i) { return i.complete && i.naturalWidth > 0; }
@@ -206,7 +207,10 @@ var vtGame = (function () {
     var x = 118, y = bird.y;
     ctx.fillStyle = "rgba(60,40,10,.18)";
     ctx.beginPath(); ctx.ellipse(x, GROUND + 2, 20 * Math.max(0.4, 1 - (GROUND - y) / 220), 4, 0, 0, 7); ctx.fill();
-    if (state === "over") return drawSheet(img["tooki-poses"], POSE, POSE.dizzy, x, GROUND);
+    if (state === "over") {
+      if (ready(img["tooki-dizzy"])) return drawSheet(img["tooki-dizzy"], DIZZY, Math.floor((t - overAt) * 10) % DIZZY.frames, x, GROUND);
+      return drawSheet(img["tooki-poses"], POSE, POSE.dizzy, x, GROUND);
+    }
     if (state === "idle") return drawSheet(img["tooki-run"], RUN, 0, x, GROUND - Math.abs(Math.sin(t * 3)) * 3);
     if (y >= GROUND) return drawSheet(img["tooki-run"], RUN, Math.floor(t * 14) % RUN.frames, x, y);
     var pose = t < bird.flapUntil ? POSE.flap : t - bird.jumpAt < 0.09 ? POSE.takeoff : bird.vy < 120 ? POSE.air : POSE.land;
