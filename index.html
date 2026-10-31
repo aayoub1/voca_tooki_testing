@@ -215,7 +215,7 @@
       var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
       if (isMobile) {
         container.className = "unity-mobile";
-        config.devicePixelRatio = 1;
+        config.devicePixelRatio = Math.min(window.devicePixelRatio || 1, 2);
         // iPhone Safari has no fullscreen API, so it only gets "turn your phone sideways"
         // (and "Add to Home Screen" for fullscreen). Android gets a Play button as well.
         var canFullscreen = !!(document.documentElement.requestFullscreen || document.documentElement.webkitRequestFullscreen);
