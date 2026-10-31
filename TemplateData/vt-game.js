@@ -104,6 +104,7 @@ var vtGame = (function () {
   function effect(kind, x, y) { effects.push({ kind: kind, x: x, y: y, born: t }); }
 
   function jump() {
+    if (paused) return;
     if (state === "idle") { state = "run"; reset(); }
     if (state === "over") { if (t - overAt > 0.5) { state = "run"; reset(); } return; }
     if (bird.y >= GROUND - 0.5) { bird.vy = JUMP; bird.flaps = 1; bird.jumpAt = t; effect("puff", 92, GROUND - 6); sfx.jump(); }
@@ -336,9 +337,10 @@ var vtGame = (function () {
   // Frame timestamps wobble by a few ms around the display's refresh interval while the screen
   // still shows frames evenly, so moving by the raw time made everything shake. Steps are whole
   // refresh intervals (learnt from the timestamps); a dropped frame still counts as two.
-  var last = 0, frameDt = 1 / 60, frames = 0;
+  var last = 0, frameDt = 1 / 60, frames = 0, paused = false;
   function frame(now) {
     if (!running) return;
+    if (paused) { last = 0; requestAnimationFrame(frame); return; }
     var raw = last ? (now - last) / 1000 : 0; last = now;
     if (raw > 0 && raw < frameDt * 1.5) frameDt += (raw - frameDt) * (frames++ < 30 ? 0.3 : 0.05);
     var dt = raw > 0 ? Math.min(0.05, Math.max(1, Math.round(raw / frameDt)) * frameDt) : 0;
@@ -366,6 +368,13 @@ var vtGame = (function () {
   requestAnimationFrame(frame);
 
   return {
+    // While Unity opens the first scene it takes most of each frame, so the game would stutter;
+    // it freezes on its current frame with a note instead.
+    pause: function (on) {
+      if (paused === on || !running) return;
+      paused = on;
+      if (on) { draw(); drawMessage("Almost there…", "Your run continues in a moment"); }
+    },
     stop: function () {
       running = false; document.removeEventListener("keydown", onKey);
       tapArea.removeEventListener("pointerdown", onTap);

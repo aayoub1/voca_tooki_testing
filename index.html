@@ -158,6 +158,8 @@
           var go = document.getElementById("vt-go");
           go.parentNode.classList.add("vt-go-show");
           go.addEventListener("click", finish);
+          // the scene's first frames are still heavy; resume the mini-game once they're past
+          if (window.vtGame) setTimeout(function () { vtGame.pause(false); }, 1000);
           document.addEventListener("keydown", function onEnter(e) {
             if (e.code !== "Enter") return;
             document.removeEventListener("keydown", onEnter);
@@ -193,6 +195,7 @@
             raise(ENGINE_SHARE + (DOWNLOAD_END - ENGINE_SHARE) * p);
             if (p >= 1 && creepTo === DOWNLOAD_END) {
               creepFrom = target; creepTo = 0.99; creepSince = performance.now(); creepMs = 8000;
+              if (window.vtGame) vtGame.pause(true);   // Unity is about to open the scene
               lineIndex = 0;
               swap(status, openLines[0]);
             }
